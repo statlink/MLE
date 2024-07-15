@@ -1,0 +1,34 @@
+comp.mle <- function(x, distr = "diri", type = 1, a = NULL, tol = 1e-07) {
+  if ( distr == "diri" ) {
+    res <- Rfast::diri.nr2(x, type = type, tol = tol)
+  } else if ( distr == "zad" ) {
+    res <- Compositional::zad.est(x)
+  } else if (distr == "afold") {
+    if ( is.null(a) ) {
+       res <- Compositional::a.est(x)
+    } else res <- Compositional::alpha.mle(x, a)
+  } else if (distr == "anorm") {
+    if ( is.null(a) ) {
+      mod <- Compositional::alfa.tune(x)
+      a <- mod[1]
+      loglik <- mod[2]
+      y <- Compositional::alfa(x, a)
+      mu <- Rfast::colmeans(y)
+      su <- cov(y)
+    } else {
+      n <- dim(x)[1]  ## sample size
+      f <- (n - 1) / n
+      D <- dim(x)[2]  ## number of components
+      d <- D - 1  ## dimensionality of the simplex
+      ja <- sum( log(x) )  ## part of the Jacobian of the alpha transformation
+      con <-  - 0.5 * n * d * log(2 * pi * f) - 0.5 * (n - 1) * d + n * (d + 0.5) * log(D)
+      trans <- Compositional::alfa(x, a)
+      z <- trans$aff
+      su <- cov(z)
+      loglik <- -0.5 * n * log( abs( det(su) ) ) + (a - 1) * sum( log(x) ) - D * trans$sa + con
+      mu <- Rfast::colmeans(y)
+    }
+    res <- list(alpha = a, loglik = loglik, mu = mu, su = su)
+  }
+  res
+}

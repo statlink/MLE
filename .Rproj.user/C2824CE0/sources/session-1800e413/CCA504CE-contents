@@ -1,0 +1,10 @@
+coldisc.mle <- function(x, distr = "poisson", type = 1) {
+  if ( distr == "poisson" ) {
+    res <- Rfast::colpoisson.mle(x)
+  } else if ( distr == "geom" ) {
+    res <- Rfast::colgeom.mle(x , type = type)
+  } else if ( distr == "borel" ) {
+    res <- Rfast2::colborel.mle(x)
+  }
+  res
+}

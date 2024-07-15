@@ -1,0 +1,8 @@
+colcens.mle <- function(x, distr = "censweibull", di, tol = 1e-07, parallel = FALSE, cores = 0) {
+  if ( distr == "censweibull" ) {
+    res <- Rfast2::colcensweibull.mle(x, di, tol = tol, parallel = parallel, cores = cores)
+  } else if ( distr == "censpois" ) {
+    res <- Rfast2::colcenspois.mle(x, tol = tol, parallel = parallel, cores = cores)
+  }
+  res
+}

@@ -1,0 +1,10 @@
+#useDynLib(fsn, .registration = TRUE)
+
+import("Compositional")
+import("Rfast")
+import("stats")
+
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+export(.onAttach)

@@ -1,0 +1,57 @@
+\name{Column-wise MLE of distributions defined in the (0, 1) interval}
+\alias{colprop.mle}
+\title{
+Column-wise MLE of distributions defined in the (0, 1) interval
+}
+
+\description{
+Column-wise MLE of distributions defined in the (0, 1) interval.
+}
+
+\usage{
+colprop.mle(x, distr = "beta", tol = 1e-07)
+}
+
+\arguments{
+\item{x}{
+A numerical vector with proportions, i.e. numbers in (0, 1) (zeros and ones are not allowed).
+}
+\item{distr}{
+The ditribution to fit. "beta" stands for the beta distribution, "logitnorm" is the logistic normal.
+}
+\item{tol}{
+The tolerance level up to which the maximisation stops.
+}
+}
+
+\details{
+Maximum likelihood estimation of the parameters of the beta distribution is performed via Newton-Raphson.
+The distributions and hence the functions does not accept zeros. "logitnorm.mle" fits the logistic normal,
+hence no nwewton-Raphson is required and the "hypersecant01.mle" uses the golden ratio
+search as is it faster than the Newton-Raphson (less calculations).
+}
+
+\value{
+A matrix with two, columns. The first one contains the parameters of the distribution
+and the second columns contains the log-likelihood values.
+}
+
+\author{
+Michail Tsagris and Sofia Piperaki.
+
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+}
+
+%\note{
+%%  ~~further notes~~
+%}
+
+\seealso{
+\code{ \link{prop.mle}, \link{positive.mle}
+}
+}
+
+\examples{
+x <- rbeta(1000, 1, 4)
+prop.mle(x, distr = "beta")
+}

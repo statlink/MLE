@@ -1,0 +1,3 @@
+tobit.mle <- function(y, tol = 1e-07) {
+ Rfast::tobit.mle(y, tol = tol)
+}

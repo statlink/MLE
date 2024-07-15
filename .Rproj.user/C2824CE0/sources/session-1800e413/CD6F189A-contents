@@ -1,0 +1,10 @@
+comp.mle <- function(x, distr = "diri", type = 1, a = NULL, tol = 1e-07) {
+  if (distr == "diri") {
+    res <- Rfast::diri.nr2(x, type = type, tol = tol)
+  } else if (distr = "afold") {
+    if ( is.null(a) ) {
+
+    }
+  }
+
+}

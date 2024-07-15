@@ -1,0 +1,61 @@
+\name{Column-wise MLE of the ordinal model without covariates}
+\alias{colordinal.mle}
+\title{
+Column-wise MLE of the ordinal model without covariates
+}
+
+\description{
+Column-wise MLE of the ordinal model without covariates.
+}
+
+\usage{
+colordinal.mle(y, link = "logit")
+}
+
+\arguments{
+\item{y}{
+A numerical matrix with values 1, 2, 3,..., not zeros, or a data.frame with ordered factors.
+}
+\item{link}{
+This can either be "logit" or "probit". It is the link function to be used.
+}
+}
+
+\details{
+Maximum likelihood of the ordinal model (proportional odds) is implemented. See for example the "polr" command in R or the examples.
+}
+
+\value{
+A list including:
+\item{param}{
+A matrix with the intercepts (threshold coefficients) of the model applied to each column (or variable).
+}
+\item{loglik}{
+The log-likelihood values.
+}
+}
+
+\references{
+Agresti, A. (2002) Categorical Data. Second edition. Wiley.
+}
+
+\author{
+Michail Tsagris and Sofia Piperaki.
+
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+}
+
+%\note{
+  %%  ~~further notes~~
+    %}
+
+\seealso{
+\code{\link{ordinal.mle}
+}
+}
+
+\examples{
+y <- matrix( rbinom(100 * 10, 2, 0.5) + 1, ncol = 10 )
+res <- colordinal.mle(y, link = "probit")
+}
+

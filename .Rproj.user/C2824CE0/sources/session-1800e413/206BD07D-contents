@@ -1,0 +1,28 @@
+#useDynLib(fsn, .registration = TRUE)
+
+importFrom("geppe", epois.mle, gep.mle, pe.mle)
+
+importFrom("Rfast", tobit.mle, vm.mle, spml.mle, wrapcauchy.mle, colvm.mle,
+           colpoisson.mle, colgeom.mle, colgammamle, colweibull.mle,
+           colpareto.mle, colexpmle, colexp2.mle, colmaxboltz.mle,
+           collindley.mle, colrayleigh.mle, colnormlog.mle, colinvgauss.mle,
+           colnormal.mle, collaplace.mle, diri.nr2, poisson.mle, zip.mle,
+           ztp.mle, negbin.mle, binom.mle, borel.mle, geom.mle, logseries.mle,
+           betageom.mle, betabinom.mle, vmf.mle, multivmf.mle, acg.mle, iag.mle,
+           mvnorm.mle, mvlnorm.mle, mvt.mle, invdir.mle, multinom.mle,
+           dirimultinom.mle, ordinal.mle, gammamle, chisq.mle, weibull.mle,
+           lomax.mle, foldnorm.mle, betaprime.mle, lognorm.mle, logcauchy.mle,
+           loglogistic.mle, normlog.mle, halfnorm.mle, invgauss.mle, pareto.mle,
+           expmle, exp2.mle, maxboltz.mle, rayleigh.mle, lindley.mle, beta.mle,
+           ibeta.mle, logitnorm.mle, hsecant01.mle, normal.mle, gumbel.mle,
+           cauchy.mle, logistic.mle, ct.mle, tmle, wigner.mle, laplace.mle)
+
+importFrom("Rfast2", censweibull.mle, censpois.mle, colcensweibull.mle,
+           colcenspois.mle, colspml.mle, colborel.mle, colordinal.mle,
+           collognorm.mle, colhalfnorm.mle, colbeta.mle, collogitnorm.mle,
+           colcauchy.mle)
+
+importFrom("skellam", skellam.mle)
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")

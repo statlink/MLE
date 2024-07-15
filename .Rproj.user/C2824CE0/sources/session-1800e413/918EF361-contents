@@ -1,0 +1,8 @@
+#useDynLib(fsn, .registration = TRUE)
+
+import("stats")
+import("Rfast")
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+export(.onAttach)

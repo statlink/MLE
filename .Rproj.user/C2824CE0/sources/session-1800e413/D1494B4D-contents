@@ -1,0 +1,55 @@
+\name{MLE for multivariate discrete data}
+\alias{mvdisc.mle}
+\title{
+MLE for multivariate discrete data
+}
+
+\description{
+MLE for multivariate discrete data.
+}
+
+\usage{
+mvdisc.mle(x, distr = "multinom", tol = 1e-07)
+}
+
+\arguments{
+\item{x}{
+A matrix with discrete valued non negative data.
+}
+\item{distr}{
+The ditribution to fit. "multinom" stands for the multinomial distribution, "dirimultinom" stands for the Dirichlet-multinomial distribution.
+}
+\item{tol}{
+The tolerance level to terminate the Newton-Raphson algorithm for the Dirichlet multinomial distribution.
+}
+}
+
+\value{
+A list including:
+\item{loglik}{
+A vector with the value of the maximised log-likelihood.
+}
+\item{param}{
+A vector of the parameters.
+}
+}
+
+\references{
+Johnson Norman L., Kotz Samuel and Balakrishnan (1997). Discrete Multivariate Distributions. Wiley
+}
+
+\author{
+Michail Tsagris and Sofia Piperaki.
+
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+}
+
+\seealso{
+\code{ \link{disc.mle}, \link{coldisc.mle}
+}
+}
+
+\examples{
+x <- t( rmultinom(1000, 20, c(0.4, 0.5, 0.1) ) )
+mvdisc.mle(x, distr = "multinom")
+}
