@@ -17,7 +17,7 @@ mvdisc.mle(x, distr = "multinom", tol = 1e-07)
 A matrix with discrete valued non negative data.
 }
 \item{distr}{
-The ditribution to fit. "multinom" stands for the multinomial distribution, "dirimultinom" stands for the Dirichlet-multinomial distribution. "bp.mle" and "bp.mle2" stand for the bivariate Poisson distribution. The The "bp.mle" returns a lot of information and is slower than "bp.mle2", which returns fewer information, but is faster.
+The distribution to fit. "multinom" stands for the multinomial distribution, "dirimultinom" stands for the Dirichlet-multinomial distribution. "bp.mle" and "bp.mle2" stand for the bivariate Poisson distribution. The The "bp.mle" returns a lot of information and is slower than "bp.mle2", which returns fewer information, but is faster.
 }
 \item{tol}{
 The tolerance level to terminate the Newton-Raphson algorithm for the Dirichlet multinomial distribution.

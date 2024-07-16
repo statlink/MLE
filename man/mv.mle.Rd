@@ -17,7 +17,7 @@ mv.mle(x, distr = "mvnorm", v = 1, tol = 1e-7)
 A matrix with numerical data.
 }
 \item{distr}{
-The ditribution to fit. "mvnorm" stands for the multivariate normal distribution,
+The distribution to fit. "mvnorm" stands for the multivariate normal distribution,
 "mvlnorm" for the multivariate log-normal, "mvt" is the multivariate t distribution and
 "invdir" stands for the inverse Dirichlet distribution.
 }

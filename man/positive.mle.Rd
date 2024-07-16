@@ -16,7 +16,7 @@ positive.mle(x, distr = "gamma", tol = 1e-07, maxiters = 100)
 A vector with positive valued data (zeros are not allowed).
 }
 \item{distr}{
-The ditribution to fit. "gamma" stands for the gamma distribution, "chisq" for the \eqn{\chi^2} distribution, "weibull" for the Weibull, "lomax" for the Lomax, "foldnorm" for the folded normal, "betaprime" for the beta-prime distribution, "lognorm" for the log-normal, "logcauchy" for the log-Cauchy, "loglogictic" for the log-logistic distribution. "halfnorm" for the half-normal, "invgauss" for the inverse Gaussian, "pareto" for the Pareto distribution, "exp" for the exponential distribution, "exp2" I do not remember, "maxboltz"
+The distribution to fit. "gamma" stands for the gamma distribution, "chisq" for the \eqn{\chi^2} distribution, "weibull" for the Weibull, "lomax" for the Lomax, "foldnorm" for the folded normal, "betaprime" for the beta-prime distribution, "lognorm" for the log-normal, "logcauchy" for the log-Cauchy, "loglogictic" for the log-logistic distribution. "halfnorm" for the half-normal, "invgauss" for the inverse Gaussian, "pareto" for the Pareto distribution, "exp" for the exponential distribution, "exp2" I do not remember, "maxboltz"
 for the Maxwell-Boltzman distribution, "rayleigh" for the Rayleigh distribution and "lindley" for the Lindley distribution. The "normlog" is simply the normal distribution where all values are positive. Note, this is not log-normal. It is the normal with a log link. Similarly to the inverse gaussian distribution where the mean is an exponentiated. This comes from the GLM theory. The "epois" stands for the exponential-Poisson, the "gep" for the generalized exponential-Poisson and the "pe" for the Poisson-exponential distribution.
 }
 \item{tol}{

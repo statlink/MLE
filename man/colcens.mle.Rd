@@ -17,7 +17,7 @@ colcens.mle(x, distr = "censweibull", di, tol = 1e-07, parallel = FALSE, cores =
 A vector with positive valued data and zero values. If there are no zero values, a simple normal model is fitted in the end.
 }
 \item{distr}{
-The ditribution to fit. "censweibull" for the censored Weibull and "censpois" for the left censored Poisson. For the "censpois" the lowest value in x is taken as the censored point and values below that number are considered to be censored.
+The distribution to fit. "censweibull" for the censored Weibull and "censpois" for the left censored Poisson. For the "censpois" the lowest value in x is taken as the censored point and values below that number are considered to be censored.
 }
 \item{di}{
 A vector of 0s (censored) and 1s (not censored) values.

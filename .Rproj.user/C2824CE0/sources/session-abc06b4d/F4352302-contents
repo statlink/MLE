@@ -1,7 +1,6 @@
 #useDynLib(fsn, .registration = TRUE)
 
 importFrom("bivpois", bp.mle, bp.mle2)
-importFrom("Compositional", zad.est, alpha.mle, a.est)
 importFrom("geppe", epois.mle, gep.mle, pe.mle)
 importFrom("gp", gp.mle)
 

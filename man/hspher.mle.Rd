@@ -17,7 +17,7 @@ hspher.mle(x, distr = "vmf", ina, tol = 1e-07, ell = FALSE)
 A matrix with directional data, i.e. unit vectors.
 }
 \item{distr}{
-The ditribution to fit. "vmf" stands for the von Mises-Fisher distribution, "multivmf" is for the vMF with multiple groups, "acg" is the angular central Gaussian 
+The distribution to fit. "vmf" stands for the von Mises-Fisher distribution, "multivmf" is for the vMF with multiple groups, "acg" is the angular central Gaussian 
 and "iag" stands for the independent angular Gaussian distribution.
 }
 \item{ina}{
