@@ -47,24 +47,27 @@ The vector of the parameters.
 
 \references{
 Kalimuthu Krishnamoorthy, Meesook Lee and Wang Xiao (2015). Likelihood ratio tests for comparing several
-gamma distributions. Environmetrics, 26(8):571-583.
+gamma distributions. Environmetrics, 26(8):571--583.
 
 N.L. Johnson, S. Kotz and N. Balakrishnan (1994). Continuous Univariate Distributions, Volume 1 (2nd Edition).
 
 N.L. Johnson, S. Kotz a nd N. Balakrishnan (1970). Distributions in statistics: continuous univariate
 distributions, Volume 2.
 
-Tsagris M., Beneki C. and Hassani H. (2014). On the folded normal distribution. Mathematics, 2(1):12-28.
+Tsagris M., Beneki C. and Hassani H. (2014). On the folded normal distribution. Mathematics, 2(1):12--28.
 
 Sharma V. K., Singh S. K., Singh U. and Agiwal V. (2015). The inverse Lindley distribution:
 a stress-strength reliability model with application to head and neck cancer data. Journal of
-Industrial and Production Engineering, 32(3): 162-173.
+Industrial and Production Engineering, 32(3): 162--173.
 
-Barreto-Souza W. and Cribari-Neto F. (2009). A generalization of the exponential-Poisson distribution. Statistics and Probability Letters, 79(24): 2493-2500.
+Barreto-Souza W. and Cribari-Neto F. (2009). A generalization of the exponential-Poisson distribution. 
+Statistics and Probability Letters, 79(24): 2493--2500.
 
-Louzada F., Ramos P. L. and Ferreira H. P. (2020). Exponential-Poisson distribution: estimation and applications to rainfall and aircraft data with zero occurrence. Communications in Statistics-Simulation and Computation, 49(4): 1024-1043.
+Louzada F., Ramos P. L. and Ferreira H. P. (2020). Exponential-Poisson distribution: estimation and applications to rainfall and aircraft data with zero occurrence. 
+Communications in Statistics--Simulation and Computation, 49(4): 1024--1043.
 
-Rodrigues G. C., Louzada F. and Ramos P. L. (2018). Poisson-exponential distribution: different methods of estimation. Journal of Applied Statistics, 45(1): 128-144.
+Rodrigues G. C., Louzada F. and Ramos P. L. (2018). Poisson-exponential distribution: different methods of estimation. 
+Journal of Applied Statistics, 45(1): 128--144.
 
 You can also check the relevant wikipedia pages for these distributions.
 }

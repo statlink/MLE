@@ -57,11 +57,14 @@ The expected covariance matrix of the multivariate log-normal distribution.
 }
 
 \references{
-Kotz S., Balakrishnan N. and Johnson N. L. (2004). Continuous multivariate distributions, Volume 1: Models and applications (Vol. 1). John wiley & sons.
+Kotz S., Balakrishnan N. and Johnson N. L. (2004). Continuous multivariate distributions, Volume 1: Models and applications (Vol. 1). 
+John wiley & sons.
 
-Nadarajah S. and Kotz S. (2008). Estimation methods for the multivariate t distribution. Acta Applicandae Mathematicae, 102(1):99-118.
+Nadarajah S. and Kotz S. (2008). Estimation methods for the multivariate t distribution. 
+Acta Applicandae Mathematicae, 102(1): 99--118.
 
-Bdiri T. and Bouguila N. (2012). Positive vectors clustering using inverted Dirichlet finite mixture models. Expert Systems with Applications, 39(2): 1869-1882.
+Bdiri T. and Bouguila N. (2012). Positive vectors clustering using inverted Dirichlet finite mixture models. 
+Expert Systems with Applications, 39(2): 1869--1882.
 
 http://isi.cbs.nl/iamamember/CD2/pdf/329.PDF
 

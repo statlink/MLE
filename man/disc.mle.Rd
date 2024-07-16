@@ -56,14 +56,16 @@ For example, param in the zero inflated Poisson.
 
 \references{
 Lambert D. (1992). Zero-Inflated Poisson Regression, with an Application to Defects in
-Manufacturing. Technometrics. 34 (1): 1-14
+Manufacturing. Technometrics. 34 (1): 1--14
 
 Johnson N. L., Kotz S. and Kemp A. W. (1992). Univariate Discrete
 Distributions (2nd ed.). Wiley.
 
-Skellam J. G. (1946) The frequency distribution of the difference between two Poisson variates belonging to different populations. Journal of the Royal Statistical Society, series A 109/3, 26.
+Skellam J. G. (1946) The frequency distribution of the difference between two Poisson variates belonging to different populations. 
+Journal of the Royal Statistical Society, series A 109/3, 26.
 
-Nikoloulopoulos A.K. and Karlis D. (2008). On modeling count data: a comparison of some well-known discrete distributions. Journal of Statistical Computation and Simulation, 78(3): 437-457.
+Nikoloulopoulos A.K. and Karlis D. (2008). On modeling count data: a comparison of some well-known discrete distributions. 
+Journal of Statistical Computation and Simulation, 78(3): 437--457.
 }
 
 \author{

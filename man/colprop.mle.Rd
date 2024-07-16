@@ -47,7 +47,9 @@ N.L. Johnson, S. Kotz and N. Balakrishnan (1994). Continuous Univariate Distribu
 
 N.L. Johnson, S. Kotz and N. Balakrishnan (1970). Distributions in statistics: continuous univariate distributions, Volume 2.
 
-J. Mazucheli, A. F. B. Menezes, L. B. Fernandes, R. P. de Oliveira and M. E. Ghitany (2020). The unit-Weibull distribution as an alternative to the Kumaraswamy distribution for the modeling of quantiles conditional on covariates. Journal of Applied Statistics, 47(6): 954-974.
+J. Mazucheli, A. F. B. Menezes, L. B. Fernandes, R. P. de Oliveira and M. E. Ghitany (2020). 
+The unit-Weibull distribution as an alternative to the Kumaraswamy distribution for the modeling of quantiles conditional on covariates. 
+Journal of Applied Statistics, 47(6): 954--974.
 }
 
 

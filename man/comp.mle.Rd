@@ -70,16 +70,19 @@ The estimated covariance matrix of the folded model.
 \references{
 Minka Thomas (2012). Estimating a Dirichlet distribution. Technical report.
 
-Ng Kai Wang, Guo-Liang Tian, and Man-Lai Tang (2011). Dirichlet and related distributions: Theory, methods and applications. John Wiley & Sons.
+Ng Kai Wang, Guo-Liang Tian, and Man-Lai Tang (2011). Dirichlet and related distributions: Theory, methods and applications. 
+John Wiley & Sons.
 
 Tsagris M. and Stewart C. (2018). A Dirichlet regression model for compositional data with zeros.
-Lobachevskii Journal of Mathematics, 39(3): 398-412.
+Lobachevskii Journal of Mathematics, 39(3): 398--412.
 Preprint available from https://arxiv.org/pdf/1410.5011.pdf
 
-Tsagris M. and Stewart C. (2022). A Review of Flexible Transformations for Modeling Compositional Data. In Advances and Innovations in Statistics and Data Science, pp. 225-234.
+Tsagris M. and Stewart C. (2022). A Review of Flexible Transformations for Modeling Compositional Data. 
+In Advances and Innovations in Statistics and Data Science, pp. 225--234.
 https://link.springer.com/chapter/10.1007/978-3-031-08329-7_10
 
-Tsagris M. and Stewart C. (2020). A folded model for compositional data analysis. Australian and New Zealand Journal of Statistics, 62(2): 249-277. https://arxiv.org/pdf/1802.07330.pdf
+Tsagris M. and Stewart C. (2020). A folded model for compositional data analysis. 
+Australian and New Zealand Journal of Statistics, 62(2): 249--277. https://arxiv.org/pdf/1802.07330.pdf
 }
 
 \author{

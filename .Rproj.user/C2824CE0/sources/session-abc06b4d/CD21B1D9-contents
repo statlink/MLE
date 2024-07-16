@@ -17,7 +17,7 @@ hspher.mle(x, distr = "vmf", ina, full = FALSE, ell = FALSE, tol = 1e-07)
 A matrix with directional data, i.e. unit vectors.
 }
 \item{distr}{
-The distribution to fit. "vmf" stands for the von Mises-Fisher distribution, "multivmf" is for the vMF with multiple groups, "acg" is the angular central Gaussian and "iag" stands for the independent angular Gaussian distribution. The "spcauchy" and "spcauchy2" are the spherical Cauchy (2 different methods of estimation), the "sipc" is the spherical isotropic projected Cauchy and the "pkbd" is the Poisson kernel based distribution. All of these are rotationally symmetric distributions. The "kent" is the Kent distribution, "esag" is the elliptically symmetric angular Gaussian and the "sespc" is the spherical elliptically symmetric projected Cauchy distribution. These last three are elliptically symmetric distributions, and here, for spherical data only. The "wood" is the Wood distribution, a bimodal distribution defined for spherical data only.
+The distribution to fit. "vmf" stands for the von Mises-Fisher distribution, "multivmf" is for the vMF with multiple groups, "acg" is the angular central Gaussian and "iag" stands for the independent angular Gaussian distribution. The "spcauchy" and "spcauchy2" are the spherical Cauchy (2 different methods of estimation), the "sipc" is the spherical isotropic projected Cauchy and the "pkbd" is the Poisson kernel based distribution. All of these are rotationally symmetric distributions. The "kent" is the Kent distribution, "esag" is the elliptically symmetric angular Gaussian and the "sespc" is the spherical elliptically symmetric projected Cauchy distribution. These last three are elliptically symmetric distributions, and here, for spherical data only.
 }
 \item{ina}{
 A numerical vector with discrete numbers starting from 1, i.e. 1, 2, 3, 4,... or a factor variable. Each number denotes a sample or group.
@@ -172,19 +172,6 @@ The angle of rotation \eqn{\psi} set this equal to TRUE. It is returned if the a
 \item{sipc.loglik}{
 The log-likelihood value of the isotropic prohected Cuchy distribution, which is rotationally symmetric.
 }
-For the Wood distribution a list including:
-\item{info}{
-A 5 x 3 matrix containing the 5 parameters, \eqn{\gamma}, \eqn{\delta}, \eqn{\alpha}, \eqn{\beta} and \eqn{\kappa} along with their corresponding 95\% confidence intervals all expressed in degrees.
-}
-\item{modes}{
-The two axis of the modes of the distribution expressed in degrees.
-}
-\item{unitvectors}{
-A 3 x 3 matrix with the 3 unit vectors associated with the \eqn{\gamma} and \eqn{\delta} parameters.
-}
-\item{loglik}{
-The value of the log-likelihood.
-}
 }
 
 \references{
@@ -196,8 +183,7 @@ Computational Statistics, 27(1): 177--190.
 Tyler D. E. (1987). Statistical analysis for the angular central Gaussian distribution on the sphere.
 Biometrika 74(3): 579-589.
 
-Paine P.J., Preston S.P., Tsagris M and Wood A.T.A. (2018). An Elliptically Symmetric Angular Gaussian Distribution. 
-Statistics and Computing, 28, 689--697.
+Paine P.J., Preston S.P., Tsagris M and Wood A.T.A. (2018). An Elliptically Symmetric Angular Gaussian Distribution. Statistics and Computing, 28, 689--697.
 
 Tsagris M. and Alzeley O. (2023). Circular and spherical projected Cauchy distributions:
 A Novel Framework for Circular and Directional Data Modeling.
@@ -213,9 +199,6 @@ Journal of Computational and Graphical Statistics, 29(4): 758--770.
 
 Sablica L., Hornik K. and Leydold J. (2023). Efficient sampling from the PKBD distribution.
 Electronic Journal of Statistics, 17(2): 2180--2209.
-
-Wood A.T.A. (1982). A bimodal distribution on the sphere.
-Journal of the Royal Statistical Society, Series C, 31(1): 52--58.
 }
 
 \author{

@@ -49,7 +49,8 @@ Tobin James (1958). Estimation of relationships for limited dependent variables.
 
 https://en.wikipedia.org/wiki/Tobit_model
 
-Fritz Scholz (1996). Maximum Likelihood Estimation for Type I Censored Weibull Data Including Covariates. Technical report. ISSTECH-96-022, Boeing Information & Support Services, P.O. Box 24346, MS-7L-22.
+Fritz Scholz (1996). Maximum Likelihood Estimation for Type I Censored Weibull Data Including Covariates. 
+Technical report. ISSTECH-96-022, Boeing Information & Support Services, P.O. Box 24346, MS-7L-22.
 
 }
 

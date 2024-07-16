@@ -49,7 +49,7 @@ Sra S. (2012). A short note on parameter approximation for von Mises-Fisher dist
 and a fast implementation of Is(x). Computational Statistics, 27(1): 177-190.
 
 Presnell Brett, Morrison Scott P. and Littell Ramon C. (1998). Projected multivariate linear models for directional data.
-Journal of the American Statistical Association, 93(443): 1068-1077.
+Journal of the American Statistical Association, 93(443): 1068--1077.
 
 Kent J. and Tyler D. (1988). Maximum likelihood estimation for the wrapped Cauchy distribution.
 Journal of Applied Statistics, 15(2): 247--254.

@@ -40,15 +40,17 @@ For each column, the same distribution is fitted and its parameters and log-like
 }
 
 \value{
-A matrix with two or three columns. The first one or the first two contain the parameter(s) of the distribution and the second or third column the relevant log-likelihood.
+A matrix with two or three columns. The first one or the first two contain the parameter(s) of the 
+distribution and the second or third column the relevant log-likelihood.
 }
 
 \references{
-Tobin James (1958). Estimation of relationships for limited dependent variables. Econometrica. 26(1):24--36.
+Tobin James (1958). Estimation of relationships for limited dependent variables. Econometrica. 26(1): 24--36.
 
 https://en.wikipedia.org/wiki/Tobit_model
 
-Fritz Scholz (1996). Maximum Likelihood Estimation for Type I Censored Weibull Data Including Covariates. Technical report. ISSTECH-96-022, Boeing Information & Support Services, P.O. Box 24346, MS-7L-22.
+Fritz Scholz (1996). Maximum Likelihood Estimation for Type I Censored Weibull Data Including Covariates. 
+Technical report. ISSTECH-96-022, Boeing Information & Support Services, P.O. Box 24346, MS-7L-22.
 
 }
 
