@@ -63,17 +63,12 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 \examples{
-M <- as.matrix(iris[1:8, 1:4])
-U <- cov( matrix( rnorm(100 * 8), ncol = 8 ) )
-V <- cov( iris[1:50, 1:4] )
-n <- dim(M)[1]  ;  p <- dim(M)[2]
-A <- chol(U)  ;  B <- chol(V)
-Y <- list()
-for ( i in 1:200 ) {
-  X <- Rfast::matrnorm(n, p)
-  Y[[ i ]] <- M + A %*% X %*% B
-}
-mod <- matrix.mle(Y)
+## silly example
+n <- 8  ;  p <- 4
+X <- list()
+for ( i in 1:200 )
+X[[ i ]] <- matrix( rnorm(n * p), ncol = p )
+mod <- matrix.mle(X)
 }
 
 \keyword{ Matrix Fisher distribution }
