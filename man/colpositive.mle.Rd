@@ -19,7 +19,7 @@ A matrix with positive valued data (zeros are not allowed).
 The distribution to fit. "gamma" stands for the gamma distribution, "weibull" for the Weibull, "pareto" for the Pareto distribution, "exp" for the exponential distribution, "exp2" I do not remember, "maxboltz" for the Maxwell-Boltzman distribution, "rayleigh" for the Rayleigh distribution and "lindley" for the Lindley distribution, "lognorm" for the log-normal distribution. "halfnorm" for the half-normal, "invgauss" for the inverse Gaussian. The "normlog" is simply the normal distribution where all values are positive. Note, this is not log-normal. It is the normal with a log link. Similarly to the inverse gaussian distribution where the mean is an exponentiated. This comes from the GLM theory. The "powerlaw" stands for the power law distribution.
 }
 \item{tol}{
-The tolerance level up to which the maximisation stops; set to 1e-09 by default.
+The tolerance level up to which the maximisation stops; set to 1e-07 by default.
 }
 \item{maxiters}{
 The maximum number of iterations the Newton-Raphson will perform for the Weibull distribution.

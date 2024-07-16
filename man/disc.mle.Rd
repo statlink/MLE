@@ -28,7 +28,7 @@ type 2 is for larger ones as is faster. For the geometric it is related to its t
 This is for the binomial distribution only, specifying the total number of successes. If NULL, it is sestimated by the data. It can also be a vector of successes.
 }
 \item{tol}{
-The tolerance level up to which the maximisation stops set to 1e-09 by default.
+The tolerance level up to which the maximisation stops set to 1e-07 by default.
 }
 }
 
