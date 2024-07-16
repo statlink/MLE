@@ -4,7 +4,8 @@ importFrom("bivpois", bp.mle, bp.mle2)
 importFrom("Compositional", zad.est, alpha.mle, a.est)
 
 importFrom("Directional", spcauchy.mle, spcauchy.mle2, sipc.mle, pkbd.mle,
-           kent.mle, esag.mle, sespc.mle, wood.mle)
+           kent.mle, esag.mle, sespc.mle, wood.mle, cicrexp.mle, circbeta.mle,
+           cardio.mle, ggvm.mle, cipc.mle, gcpc.mle, mmvm.mle)
 
 importFrom("geppe", epois.mle, gep.mle, pe.mle)
 importFrom("gp", gp.mle)

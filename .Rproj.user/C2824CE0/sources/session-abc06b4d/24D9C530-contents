@@ -5,11 +5,10 @@ importFrom("Compositional", zad.est, alpha.mle, a.est)
 
 importFrom("Directional", spcauchy.mle, spcauchy.mle2, sipc.mle, pkbd.mle,
            kent.mle, esag.mle, sespc.mle, wood.mle, circexp.mle, circbeta.mle,
-           cardio.mle, ggvm.mle, cipc.mle, gcpc.mle, mmvm.mle, matrixfisher.mle)
+           cardio.mle, ggvm.mle, cipc.mle, gcpc.mle, mmvm.mle)
 
 importFrom("geppe", epois.mle, gep.mle, pe.mle)
 importFrom("gp", gp.mle)
-importFrom("MN", mn.mle)
 
 importFrom("Rfast", tobit.mle, vm.mle, spml.mle, wrapcauchy.mle, colvm.mle,
            colpoisson.mle, colgeom.mle, colgammamle, colweibull.mle,

@@ -34,12 +34,10 @@ The maximum number of iterations to implement.
 }
 
 \details{
-The parameters of the bivariate angular Gaussian (spml.mle), wrapped Cauchy, circular exponential,
-cardioid, circular beta, geometrically generalised von Mises, CIPC (reparametrised version of the
-wrapped Cauchy), GCPC (generalisation of the CIPC) and multi-modal von Mises distributions are
-estimated. For the Wrapped Cauchy, the iterative procedure described by Kent and Tyler (1988) is
-used. The Newton-Raphson algortihm for the angular Gaussian is described in the regression setting
-in Presnell et al. (1998). The circular exponential is also known as wrapped exponential distribution.
+The parameters of the von Mises, the bivariate angular Gaussian and wrapped Cauchy distributions are estimated.
+For the wrapped Cauchy, the iterative procedure described by Kent and Tyler (1988) is used.
+As for the von Mises distribution, we use a Newton-Raphson to estimate the concentration parameter.
+The angular Gaussian is described, in the regression setting in Presnell et al. (1998).
 }
 
 \value{

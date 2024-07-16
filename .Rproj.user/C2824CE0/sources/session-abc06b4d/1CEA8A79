@@ -1,26 +1,26 @@
 {
-    "id": "03B3BC1B",
-    "path": "~/GitHub/MLE/man/hspher.mle.Rd",
-    "project_path": "man/hspher.mle.Rd",
+    "id": "1CEA8A79",
+    "path": "~/GitHub/MLE/man/matrix.mle.Rd",
+    "project_path": "man/matrix.mle.Rd",
     "type": "r_doc",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1721120447403.0,
+    "created": 1721123819713.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "216,57",
-        "scrollLine": "188"
+        "cursorPosition": "64,10",
+        "scrollLine": "52"
     },
     "folds": "",
-    "lastKnownWriteTime": 1721121003,
+    "lastKnownWriteTime": 1721123823,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1721121003,
+    "last_content_update": 1721123823984,
     "read_only": false,
     "read_only_alternatives": []
 }
