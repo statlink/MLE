@@ -5,7 +5,7 @@
 Maximum Likelihood Estimation of Various Univariate and Multivariate Distributions
 }
 \description{
-The package offers functions for the maximum likelihood estimation of various univariate and multivariate distributions. The list includes univariate continuous and discrete distributions, distributions that lie on the real line, the positive line, interval retricted, circular distributions. Further, multivariate continuous and discrete distributions, distributions for compositional and directional data, etc. The references are included within each set of functions.
+The package offers functions for the maximum likelihood estimation of various univariate and multivariate distributions. The list includes univariate continuous and discrete distributions, distributions that lie on the real line, the positive line, interval restricted, circular distributions. Further, multivariate continuous and discrete distributions, distributions for compositional and directional data, etc. The references are included within each set of functions.
 }
 \details{
 \tabular{lll}{
