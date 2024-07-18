@@ -1,10 +1,8 @@
 bell.mle <- function(x, a, b, k, lambda, distr = "BB12", method = "B") {
   if ( distr == "BB12" ) {
     res <- BGFD::mBellB(x, a = a, b = b, k = k, lambda = lambda, method = method)
-    ############## here these two lines. Do the same for all other functions below
     param <- res$Estimates[, 1]
     names(param) <- c("alpha", "beta", "kappa", "lambda")
-    ##################
   } else if ( distr == "BBX" ) {
     res <- BGFD::mBellBX(x, a = a, lambda = lambda, method = method)
   } else if ( distr == "BE" ) {
