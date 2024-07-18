@@ -12,12 +12,13 @@ The package offers functions for the maximum likelihood estimation of various un
 Package: \tab MLE\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
-Date: \tab 2024-07-16\cr
+Date: \tab 2024-07-17\cr
 License: \tab GPL-2\cr
 }
 }
 \author{
-Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki \email{sofiapip23@gmail.com}.
+Michail Tsagris \email{mtsagris@uoc.gr}, Sofia Piperaki \email{sofiapip23@gmail.com}
+and Muhammad Imran \email{imranshakoor84@yahoo.com}.
 }
 
 \section{Maintainers}{
