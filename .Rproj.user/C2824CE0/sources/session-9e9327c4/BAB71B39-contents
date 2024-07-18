@@ -9,7 +9,7 @@ MLE of some circular distributions.
 }
 
 \usage{
-circ.mle(x, rads = FALSE, distr = "vm", N = 2, tol = 1e-07, maxiters = 100)
+circ.mle(x, rads = FALSE, distr = "vm", N = 2, ina, tol = 1e-07, maxiters = 100)
 }
 
 \arguments{
@@ -20,10 +20,13 @@ A numerical vector with the circular data. They must be expressed in radians. If
 If the data are in radians set this to TRUE.
 }
 \item{distr}{
-The type of distribution to fit, "vm" stands for the von Mises, "spml" is the angular Gaussian, "purka" is the Purkayastha, and "wrapcauchy" is the wrapped Cauchy distribution, "circexp" and "circbeta" stand for the circular exponential and the circular beta distributions, respectively. "cardio" is the cardioid distribution and "ggvm" is the generalized von Mises distribution, "cipc" is the circular independent projected Cauchy, "gcpc" is the generalised circular projected Cauchy distribution and "mmvm" is the multi-modal von Mises distribution.
+The type of distribution to fit, "vm" stands for the von Mises, "spml" is the angular Gaussian, "purka" is the Purkayastha, and "wrapcauchy" is the wrapped Cauchy distribution, "circexp" and "circbeta" stand for the circular exponential and the circular beta distributions, respectively. "cardio" is the cardioid distribution and "ggvm" is the generalized von Mises distribution, "cipc" is the circular independent projected Cauchy, "gcpc" is the generalised circular projected Cauchy distribution and "mmvm" is the multi-modal von Mises distribution. "multivm" and "multispml" denote the von Mises and the angular Gaussian but for multiple samples.
 }
 \item{N}{
 The number of modes to consider in the multi-modal von Mises distribution.
+}
+\item{ina}{
+A numerical vector with discrete numbers starting from 1, i.e. 1, 2, 3, 4,... or a factor variable. Each number denotes a sample or group. If you supply a continuous valued vector the function will obviously provide wrong results. This is only for "multivm" and "multispml".
 }
 \item{tol}{
 The tolerance level to stop the iterative process of finding the MLEs.

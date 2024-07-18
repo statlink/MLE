@@ -1,57 +1,6 @@
 
 
-# prop
-prop.mle <- function(x, distr = "kumar", tol = 1e-07, maxiters = 50) {
-  if ( distr == "kumar" ) {
-    res <- Rfast2::kumar.mle(x, tol = tol, maxiters = maxiters)
-    } else if ( distr == "simplex" ) {
-    res <- Rfast2::simplex.mle(x, tol = tol)
- } else if ( distr == "zil" ) {
-    res <- Rfast2::zil.mle(x)
- } else if ( distr == "unitweibull" ) {
-    res <- Rfast2::unitweibull.mle(x, tol = tol, maxiters = maxiters)
- } else if ( distr == "cbern" ) {
-    res <- Rfast2::cbern.mle(x, tol = tol)
- } else if ( distr == "sp" ) {
-    res <- Rfast2::simplex.mle(x, tol = tol)
- }
-  res
-}
-# circ with multiple samples
-circmulti.mle <- function(x, distr = "multivm", ina, tol = 1e-07 , ell = FALSE){
-   if ( distr == "multivm") {
-    res <- Rfast2::multivm.mle(x, ina, tol = tol, ell = ell)
-   } else if ( distr == "multispml" ) {
-    res <- Rfast2::multispml.mle(x, ina, tol = tol, ell = ell)
-  }
- res
-}
-#truncated
-trunc.mle <- function(x, distr = "trunccauchy", a, b, tol = 1e-07) {
- if ( distr == "trunccauchy") {
-    res <- Rfast2::trunccauchy.mle(x, a, b, tol = tol)
-    } else if ( distr == "truncexpmle" ) {
-    res <- Rfast2::truncexpmle(x, b, tol = tol)
-  }
- res
-}
-#cauchy generalised with zero loc
-cauchygen.mle <- function(x, distr = "trunccauchy", tol = 1e-07) {
- if ( distr == "trunccauchy") {
-    res <- Rfast2::cauchy0.mle(x, tol = tol)
-    } else if ( distr == "gnormal0" ) {
-    res <- Rfast2::gnormal0.mle(x, tol = tol)
-  }
- res
-}
 
-#z
-zi.mle <- function(x, distr = "zigamma", tol = 1e-07) {
-if ( distr == "zigamma") {
-    res <- Rfast2::zigamma.mle(x, tol = tol)
-    } else if ( distr == "ziweibull" ) {
-    res <- Rfast2::ziweibull.mle(x, tol = tol)
-  }
- res
-}
+
+
 

@@ -31,7 +31,10 @@ importFrom("Rfast2", censweibull.mle, censpois.mle, colcensweibull.mle,
            colcenspois.mle, colspml.mle, colborel.mle, colordinal.mle,
            collognorm.mle, colhalfnorm.mle, colbeta.mle, collogitnorm.mle,
            colcauchy.mle, colpowerlaw.mle, colunitweibull.mle, colsp.mle,
-           purka.mle, halfcauchy.mle, powerlaw.mle, gammapois.mle)
+           purka.mle, halfcauchy.mle, powerlaw.mle, gammapois.mle,
+           multivm.mle, multispml.mle, zigamma.mle, ziweibull.mle, cauchy0.mle,
+           gnormal0.mle, trunccauchy.mle, truncexpmle, kumar.mle, simplex,
+           zil.mle, unitweibull.mle, cbern.mle, sp.mle)
 
 importFrom("skellam", skellam.mle)
 

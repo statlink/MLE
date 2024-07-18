@@ -1,0 +1,75 @@
+\name{Column-wise MLE of some censored models}
+\alias{colcens.mle}
+\title{
+Column-wise MLE of some censored models
+}
+
+\description{
+Column-wise MLE of some censored models.
+}
+
+\usage{
+colcens.mle(x, distr = "censweibull", di, tol = 1e-07, parallel = FALSE, cores = 0)
+}
+
+\arguments{
+\item{x}{
+A vector with positive valued data and zero values. If there are no zero values, a simple normal model is fitted in the end.
+}
+\item{distr}{
+The distribution to fit. "censweibull" for the censored Weibull and "censpois" for the left censored Poisson. For the "censpois" the lowest value in x is taken as the censored point and values below that number are considered to be censored.
+}
+\item{di}{
+A vector of 0s (censored) and 1s (not censored) values.
+}
+\item{tol}{
+The tolerance level up to which the maximisation stops; set to 1e-07 by default.
+}
+\item{parallel}{
+Do you want to calculations to take place in parallel? The default value is FALSE.
+}
+\item{cores}{
+In case you set parallel = TRUE, then you need to specify the number of cores.
+}
+}
+
+\details{
+For each column, the same distribution is fitted and its parameters and log-likelihood are computed.
+
+
+}
+
+\value{
+A matrix with two or three columns. The first one or the first two contain the parameter(s) of the 
+distribution and the second or third column the relevant log-likelihood.
+}
+
+\references{
+Tobin James (1958). Estimation of relationships for limited dependent variables. Econometrica. 26(1): 24--36.
+
+https://en.wikipedia.org/wiki/Tobit_model
+
+Fritz Scholz (1996). Maximum Likelihood Estimation for Type I Censored Weibull Data Including Covariates. 
+Technical report. ISSTECH-96-022, Boeing Information & Support Services, P.O. Box 24346, MS-7L-22.
+
+}
+
+\author{
+Michail Tsagris and Sofia Piperaki.
+
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+}
+
+\seealso{
+\code{ \link{cens.mle}, \link{colpositive.mle}, \link{colreal.mle}
+}
+}
+
+\examples{
+x1 <- matrix( rpois(1000 * 10, 15), ncol = 10)
+x <- x1
+x[x <= 10] <- 10
+colMeans(x) ## simple Poisson
+colcens.mle(x, distr = "censpois")
+}
+
