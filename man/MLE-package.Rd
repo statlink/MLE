@@ -12,7 +12,7 @@ The package offers functions for the maximum likelihood estimation of various un
 Package: \tab MLE\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
-Date: \tab 2024-07-18\cr
+Date: \tab 2024-07-21\cr
 License: \tab GPL-2\cr
 }
 }
