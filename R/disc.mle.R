@@ -25,6 +25,19 @@ disc.mle <- function(x, distr = "poisson", N = NULL, type = 1, tol = 1e-07) {
     res <- skellam::skellam.mle(x)
   } else if ( distr == "gp" ) {
     res <- gp::gp.mle(x)
+  } else if ( distr == "com-pois" ) {
+    a <- COMPoissonReg::glm.cmp(x ~ 1)
+	param <- exp( a[[10]]$par ) 
+	names(param) <- c("lambda", "nu")
+    loglik <- a[[ 9 ]] 
+	res <- list(param = param, loglik = loglik)
+  } else if ( distr == "zicom-pois" ) {
+    a <- COMPoissonReg::glm.cmp(x ~ 1, formula.p = ~1)
+	param <- exp( a[[12]]$par ) 
+	names(param) <- c("lambda", "nu", "p")
+    loglik <- a[[ 11 ]] 
+	res <- list(param = param, loglik = loglik)
   }
+  
   res
 }

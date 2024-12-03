@@ -4,6 +4,7 @@ importFrom("BGFD", mBellB, mBellBX, mBellE, mBellEW, mBellEE, mBellF, mBellL,
            mBellW, mCBellB, mCBellBX, mCBellE, mCBellEW, mCBellEE, mCBellF,
            mCBellL, mCBellW)
 importFrom("bivpois", bp.mle, bp.mle2)
+importFrom("COMPoissonReg", glm.cmp)
 importFrom("Compositional", zad.est, alpha.mle, a.est)
 
 importFrom("Directional", spcauchy.mle, spcauchy.mle2, sipc.mle, pkbd.mle,
