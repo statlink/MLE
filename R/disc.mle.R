@@ -28,7 +28,7 @@ disc.mle <- function(x, distr = "poisson", N = NULL, type = 1, tol = 1e-07) {
   } else if( distr == "cc" ) {
     res <- CCd::cc.mle(x)
   } else if( distr == "cc0" ) {
-    res <- CCd::cc.mle0(x)
+    res <- CCd::cc.mle0(x, tol = tol)
   } else if ( distr == "com-pois" ) {
     a <- COMPoissonReg::glm.cmp(x ~ 1)
 	  param <- exp( a[[10]]$par )

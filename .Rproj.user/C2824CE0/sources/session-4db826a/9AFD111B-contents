@@ -5,7 +5,6 @@ importFrom("BGFD", mBellB, mBellBX, mBellE, mBellEW, mBellEE, mBellF, mBellL,
            mCBellL, mCBellW)
 importFrom("bivpois", bp.mle, bp.mle2)
 importFrom("bivpois", cc.mle, cc.mle0)
-
 importFrom("COMPoissonReg", glm.cmp)
 importFrom("Compositional", zad.est, alpha.mle, a.est)
 

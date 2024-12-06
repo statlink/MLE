@@ -68,8 +68,9 @@ Distributions (2nd ed.). Wiley.
 Skellam J. G. (1946) The frequency distribution of the difference between two Poisson variates belonging to different populations.
 Journal of the Royal Statistical Society, series A 109/3, 26.
 
-Nikoloulopoulos A.K. and Karlis D. (2008). On modeling count data: a comparison of some well-known discrete distributions.
-Journal of Statistical Computation and Simulation, 78(3): 437--457.
+Nikoloulopoulos A.K. and Karlis D. (2008). On modeling count data: a comparison of some well-known discrete distributions. Journal of Statistical Computation and Simulation, 78(3): 437--457.
+
+Papadatos N. (2022). The characteristic function of the discrete Cauchy distribution In Memory of T. Cacoullos. Journal of Statistical Theory and Practice, 16(3): 47.
 }
 
 \author{
