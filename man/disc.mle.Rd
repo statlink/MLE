@@ -17,13 +17,11 @@ disc.mle(x, distr = "poisson", N = NULL, type = 1, tol = 1e-07)
 A vector with discrete valued data.
 }
 \item{distr}{
-The distribution to fit, "poisson" stands for the Poisson, "zip" for the zero-inflated Poisson, 
-"ztp" for the zero-truncated Poisson, "negbin" for the negative binomial, "binom" for the binomial, 
-"borel" for the Borel distribution, "geom" for the geometric, "logseries" for the log-series distribution, 
-"betageom" for the beta-geometric, "betabinom" for the beta-binomial distribution, 
-"skellam" for the Skellam distribution, "gp" for the generalised Poisson distribution, 
-"gammapois" for the gamma-Poisson distribution, "com-pois" for the Conway-Maxwell Poisson (COM-Poisson), and
-"zicom-pois" for the zero inflated COM-Poisson distribution.
+The distribution to fit, "poisson" stands for the Poisson, "zip" for the zero-inflated Poisson,
+"ztp" for the zero-truncated Poisson, "negbin" for the negative binomial, "binom" for the binomial,
+"borel" for the Borel distribution, "geom" for the geometric, "logseries" for the log-series distribution, "betageom" for the beta-geometric, "betabinom" for the beta-binomial distribution,
+"skellam" for the Skellam distribution, "gp" for the generalised Poisson distribution,
+"gammapois" for the gamma-Poisson distribution, "cc" for the Cacoullos-Cauchy distribution, "cc0" for the Cacoullos-Cauchy distribution with zero location, "com-pois" for the Conway-Maxwell Poisson (COM-Poisson), and "zicom-pois" for the zero inflated COM-Poisson distribution.
 }
 \item{type}{
 This argument is for the negative binomial and the geometric distribution.
