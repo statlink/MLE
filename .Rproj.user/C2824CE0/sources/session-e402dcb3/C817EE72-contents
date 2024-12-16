@@ -1,8 +1,0 @@
-colcirc.mle <- function(x, distr = "vm", tol = 1e-07, parallel = FALSE, cores = 0, maxiters = 100) {
-  if ( distr == "vm" ) {
-    res <- Rfast::colvm.mle(x, tol = tol)
-  } else if ( distr == "spml" ) {
-    res <- Rfast2::colspml.mle(x, tol = tol, maxiters = maxiters)
-  }
-  res
-}

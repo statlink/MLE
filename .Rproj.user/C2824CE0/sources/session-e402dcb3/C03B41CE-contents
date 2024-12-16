@@ -1,8 +1,0 @@
-colprop.mle <- function(x, distr = "beta", tol = 1e-07 ){
-  if ( distr == "beta" ) {
-    res <- Rfast2::colbeta.mle(x, tol = tol)
-  } else if ( distr == "logitnorm" ) {
-    res <- Rfast2::collogitnorm.mle(x)
-  }
-  res
-}

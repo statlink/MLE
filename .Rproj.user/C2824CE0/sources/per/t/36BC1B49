@@ -1,0 +1,26 @@
+{
+    "id": "36BC1B49",
+    "path": "~/GitHub/MLE/R/positive.mle.R",
+    "project_path": "R/positive.mle.R",
+    "type": "r_source",
+    "hash": "4243723958",
+    "contents": "",
+    "dirty": false,
+    "created": 1734345772663.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "99,22",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1734345782,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1734345782831,
+    "read_only": false,
+    "read_only_alternatives": []
+}
