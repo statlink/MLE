@@ -1,14 +1,14 @@
-\name{Column-wise MLE of continuous univariate distributions defined on the real line}
-\alias{colreal.mle}
+\name{MLE of continuous univariate distributions defined on the real line}
+\alias{real.mle}
 \title{
-Column-wise MLE of continuous univariate distributions defined on the real line}
+MLE of continuous univariate distributions defined on the real line}
 
 \description{
-Column-wise MLE of continuous univariate distributions defined on the real line.
+MLE of continuous univariate distributions defined on the real line.
 }
 
 \usage{
-colreal.mle(x, distr = "normal", v = 5, tol = 1e-07, maxiters = 100, parallel = FALSE)
+real.mle(x, distr = "normal", v = 5, tol = 1e-7)
 }
 
 \arguments{
@@ -22,13 +22,7 @@ The distribution to fit, "normal" stands for the normal distribution, "gumbel" f
 The degrees of freedom of the t distribution.
 }
 \item{tol}{
-The tolerance level to stop the iterative process of finding the MLEs.
-}
-\item{maxiters}{
-The maximum number of iterations to implement.
-}
-\item{parallel}{
-Should the computations take place in parallel?
+The tolerance level up to which the maximisation stops set to 1e-07 by default.
 }
 }
 
@@ -40,8 +34,19 @@ double exponential distribution.
 }
 
 \value{
-A matrix with two, columns. The first one contains the parameters of the distribution
-and the second columns contains the log-likelihood values.
+Usually a list with three elements, but this is not for all cases.
+\item{iters}{
+The number of iterations required for the Newton-Raphson to converge.
+}
+\item{scale}{
+The estimated scale parameter of the Cauchy distribution.
+}
+\item{loglik}{
+The value of the maximised log-likelihood.
+}
+\item{param}{
+The vector of the parameters.
+}
 }
 
 \references{
@@ -57,13 +62,13 @@ and Kullback-Leibler Distance. Transaction on Image Processing. 11(2): 146--158.
 }
 
 \author{
-Michail Tsagris, Sofia Piperaki and Nikolaos Kontemeniotis.
+Michail Tsagris and Sofia Piperaki.
 
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}, Sofia Piperaki  \email{sofiapip23@gmail.com} and Nikolaos Kontemeniotis \email{kontemeniotisn@gmail.com}.
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
 }
 
 \seealso{
-\code{ \link{real.mle}, \link{colpositive.mle}, \link{colcirc.mle}, \link{coldisc.mle}
+\code{ \link{positive.mle}, \link{circ.mle}, \link{disc.mle}
 }
 }
 
