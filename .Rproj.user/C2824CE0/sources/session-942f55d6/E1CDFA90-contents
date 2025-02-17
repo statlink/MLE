@@ -7,7 +7,7 @@ Authors@R: c( person("Michail", "Tsagris", role = c("aut", "cre"), email = "mtsa
               person("Sofia", "Piperaki", role = c("aut"), email = "sofiapip23@gmail.com"),
               person( "Muhammad", "Imran", role = "ctb", email = "imranshakoor84@yahoo.com" )
               person( "Rafail", "Vargiakakis", role = "auth", email = "rafailvargiakakis@gmail.com" ),
-              person( "Nikolaos", "Kontemeniotis", role = "auth", email = "" ) )
+              person( "Nikolaos", "Kontemeniotis", role = "auth", email = "kontemeniotisn@gmail.com" ) )
 Author: Michail Tsagris [aut, cre], Sofia Piperaki [aut], Muhammad Imran [ctb], Rafail Vargiakakis [auth], Nikolaos Kontemeniotis [auth]
 Maintainer: Michail Tsagris <mtsagris@uoc.gr>
 Depends: R (>= 4.0)
