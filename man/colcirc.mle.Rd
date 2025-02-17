@@ -85,9 +85,9 @@ in Statistics-Theory and Methods, 19(6): 1973--1986
 }
 
 \author{
-Michail Tsagris and Sofia Piperaki.
+Michail Tsagris, Sofia Piperaki and Rafail Vargiakakis.
 
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}, Sofia Piperaki  \email{sofiapip23@gmail.com} and Rafail Vargiakakis \email{rafailvargiakakis@gmail.com}.
 }
 
 %\note{
