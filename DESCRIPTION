@@ -8,7 +8,7 @@ Authors@R: c( person("Michail", "Tsagris", role = c("aut", "cre"), email = "mtsa
               person( "Muhammad", "Imran", role = "ctb", email = "imranshakoor84@yahoo.com" ),
               person( "Rafail", "Vargiakakis", role = "aut", email = "rafailvargiakakis@gmail.com" ),
               person( "Nikolaos", "Kontemeniotis", role = "aut", email = "kontemeniotisn@gmail.com" ) )
-Author: Michail Tsagris [aut, cre], Sofia Piperaki [aut], Muhammad Imran [ctb], Rafail Vargiakakis [auth], Nikolaos Kontemeniotis [auth]
+Author: Michail Tsagris [aut, cre], Sofia Piperaki [aut], Muhammad Imran [ctb], Rafail Vargiakakis [aut], Nikolaos Kontemeniotis [aut]
 Maintainer: Michail Tsagris <mtsagris@uoc.gr>
 Depends: R (>= 4.0)
 Imports: BGFD, bivpois, CCd, COMPoissonReg, Compositional, Directional, geppe, gp, MN, Rfast, Rfast2, skellam
