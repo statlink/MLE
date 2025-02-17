@@ -1,12 +1,14 @@
 Package: MLE
 Type: Package
 Title: Maximum Likelihood Estimation of Various Univariate and Multivariate Distributions
-Version: 1.3
-Date: 2024-12-16
+Version: 1.4
+Date: 2025-02-17
 Authors@R: c( person("Michail", "Tsagris", role = c("aut", "cre"), email = "mtsagris@uoc.gr"), 
               person("Sofia", "Piperaki", role = c("aut"), email = "sofiapip23@gmail.com"),
-              person( "Muhammad", "Imran", role = "ctb", email = "imranshakoor84@yahoo.com" ) )
-Author: Michail Tsagris [aut, cre], Sofia Piperaki [aut], Muhammad Imran [ctb]
+              person( "Muhammad", "Imran", role = "ctb", email = "imranshakoor84@yahoo.com" )
+              person( "Rafail", "Vargiakakis", role = "auth", email = "rafailvargiakakis@gmail.com" ),
+              person( "Nikolaos", "Kontemeniotis", role = "auth", email = "" ) )
+Author: Michail Tsagris [aut, cre], Sofia Piperaki [aut], Muhammad Imran [ctb], Rafail Vargiakakis [auth], Nikolaos Kontemeniotis [auth]
 Maintainer: Michail Tsagris <mtsagris@uoc.gr>
 Depends: R (>= 4.0)
 Imports: BGFD, bivpois, CCd, COMPoissonReg, Compositional, Directional, geppe, gp, MN, Rfast, Rfast2, skellam
