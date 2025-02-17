@@ -99,10 +99,10 @@ coldisc.mle <- function(x, distr = "poisson", N = NULL, type = 1, tol = 1e-7) {
 }
 
 #----colbetabinom.mle-----
-.colbetabinom.mle <- function(x, N, tol = tol) {
+.colbetabinom.mle <- function(x, N) {
   n <- dim(x)[2]
   res <- matrix(nrow = n, ncol = 4)
-  for ( i in 1:n )  res[i, ] <- unlist( Rfast::betabinom.mle(x[, i], N = N[i], tol = tol) )
+  for ( i in 1:n )  res[i, ] <- unlist( Rfast::betabinom.mle(x[, i], N = N[i]) )
   colnames(res) <- c('iters', 'alpha', 'beta', 'loglik')
   res
 }
