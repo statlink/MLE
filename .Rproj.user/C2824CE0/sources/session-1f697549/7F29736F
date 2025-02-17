@@ -1,0 +1,26 @@
+{
+    "id": "7F29736F",
+    "path": "~/GitHub/MLE/R/circ.mle.R",
+    "project_path": "R/circ.mle.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1739788606625.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "20,11",
+        "scrollLine": "8"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1739787196,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1739787196,
+    "read_only": false,
+    "read_only_alternatives": []
+}

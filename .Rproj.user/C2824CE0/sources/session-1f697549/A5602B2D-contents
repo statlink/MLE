@@ -14,7 +14,7 @@ colcirc.mle <- function(x, distr = "vm", N = 2, ina, tol = 1e-07, maxiters = 100
   } else if ( distr == "cipc" ) {
     res <- .colcipc.mle(x, tol = tol)
   } else if ( distr == "gcpc" ) {
-    res <- .colgcpc.mle(x)
+    res <- .colgcpc.mle(x, tol = tol)
   } else if ( distr == "multivm") {
     res <- .colmultivm.mle(x, ina = ina, tol = tol)
   } else if ( distr == "multispml" ) {
@@ -32,7 +32,7 @@ colcirc.mle <- function(x, distr = "vm", N = 2, ina, tol = 1e-07, maxiters = 100
   res
 }
 
-.colwrapcauchy.mle <- function(x, tol = tol) {
+.colwrapcauchy.mle <- function(x) {
   res <- matrix(NA, dim(x)[2], 4)
   for ( i in 1:dim(x)[2] )  res[i, ] <- unlist( Rfast::wrapcauchy.mle(x[, i], tol = tol) )
   colnames(res) <- c("iters", "loglik", "direction", "param.rho")
@@ -60,9 +60,9 @@ colcirc.mle <- function(x, distr = "vm", N = 2, ina, tol = 1e-07, maxiters = 100
   res
 }
 
-.colcipc.mle <- function(x, tol) {
+.colcipc.mle <- function(x) {
   res <- matrix(NA, dim(x)[2], 5)
-  for ( i in 1:dim(x)[2] )  res[i, ] <- unlist( Directional::cipc.mle(x[, i], rads = TRUE, tol = tol) )
+  for ( i in 1:dim(x)[2] )  res[i, ] <- unlist( Directional::cipc.mle(x[, i], rads = TRUE) )
   colnames(res) <- c("mu1", "mu2", "circmu", "gamma", "loglik")
   res
 }
