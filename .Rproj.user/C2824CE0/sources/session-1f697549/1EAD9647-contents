@@ -1,0 +1,32 @@
+circ.mle <- function(x, rads = FALSE, distr = "vm", N = 2, ina, tol = 1e-07, maxiters = 100) {
+  if ( !rads )  x <- x * pi/180
+
+  if ( distr == "vm" ) {
+    res <- Rfast::vm.mle(x, tol = tol)
+  } else if ( distr == "spml" ) {
+    res <- Rfast::spml.mle(x, tol = tol, maxiters = maxiters)
+  } else if ( distr == "purka" ) {
+    res <- Rfast2::purka.mle(x)
+  } else if ( distr == "wrapcauchy" ) {
+    res <- Rfast::wrapcauchy.mle(x, tol = tol)
+  } else if ( distr == "circexp" ) {
+    res <- Directional::circexp.mle(x, rads = TRUE, tol = tol)
+  } else if ( distr == "circbeta" ) {
+    res <- Directional::circbeta.mle(x, rads = TRUE)
+  } else if ( distr == "cardio" ) {
+    res <- Directional::cardio.mle(x, rads = TRUE)
+  } else if ( distr == "ggvm" ) {
+    res <- Directional::ggvm.mle(x, rads = TRUE)
+  } else if ( distr == "cipc" ) {
+    res <- Directional::cipc.mle(x, rads = TRUE, tol = tol)
+  } else if ( distr == "gcpc" ) {
+    res <- Directional::gcpc.mle(x, rads = TRUE)
+  } else if ( distr == "mmvm" ) {
+    res <- Directional::mmvm.mle(x, N = N, rads = TRUE)
+  } else if ( distr == "multivm") {
+    res <- Rfast2::multivm.mle(x, ina, tol = tol, ell = TRUE)
+  } else if ( distr == "multispml" ) {
+    res <- Rfast2::multispml.mle(x, ina, tol = tol, ell = TRUE)
+  }
+  res
+}

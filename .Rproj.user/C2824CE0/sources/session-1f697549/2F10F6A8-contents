@@ -1,0 +1,142 @@
+\name{MLE of some circular distributions}
+\alias{circ.mle}
+\title{
+MLE of some circular distributions
+}
+
+\description{
+MLE of some circular distributions.
+}
+
+\usage{
+circ.mle(x, rads = FALSE, distr = "vm", N = 2, ina, tol = 1e-07, maxiters = 100)
+}
+
+\arguments{
+\item{x}{
+A numerical vector with the circular data. They must be expressed in radians. If distr is "spml" or "purka" this can also be a matrix with two columns, the cosinus and the sinus of the circular data.
+}
+\item{rads}{
+If the data are in radians set this to TRUE.
+}
+\item{distr}{
+The type of distribution to fit, "vm" stands for the von Mises, "spml" is the angular Gaussian, "purka" is the Purkayastha, and "wrapcauchy" is the wrapped Cauchy distribution, "circexp" and "circbeta" stand for the circular exponential and the circular beta distributions, respectively. "cardio" is the cardioid distribution and "ggvm" is the generalized von Mises distribution, "cipc" is the circular independent projected Cauchy, "gcpc" is the generalised circular projected Cauchy distribution and "mmvm" is the multi-modal von Mises distribution. "multivm" and "multispml" denote the von Mises and the angular Gaussian but for multiple samples.
+}
+\item{N}{
+The number of modes to consider in the multi-modal von Mises distribution.
+}
+\item{ina}{
+A numerical vector with discrete numbers starting from 1, i.e. 1, 2, 3, 4,... or a factor variable. Each number denotes a sample or group. If you supply a continuous valued vector the function will obviously provide wrong results. This is only for "multivm" and "multispml".
+}
+\item{tol}{
+The tolerance level to stop the iterative process of finding the MLEs.
+}
+\item{maxiters}{
+The maximum number of iterations to implement.
+}
+}
+
+\details{
+The parameters of the bivariate angular Gaussian, wrapped Cauchy, circular exponential,
+cardioid, circular beta, geometrically generalised von Mises, CIPC (reparametrised version of the
+wrapped Cauchy), GCPC (generalisation of the CIPC) and multi-modal von Mises distributions are
+estimated. For the Wrapped Cauchy, the iterative procedure described by Kent and Tyler (1988) is
+used. The Newton-Raphson algortihm for the angular Gaussian is described in the regression setting
+in Presnell et al. (1998). The circular exponential is also known as wrapped exponential distribution.
+}
+
+\value{
+A list including:
+\item{iters}{
+The iterations required until convergence. This is returned in the wrapped Cauchy distribution only.
+}
+\item{param}{
+A vector consisting of the estimates of the two parameters, the mean direction for both distributions and the concentration parameter \eqn{\kappa} and the \eqn{\rho} for the von Mises (and the multi-modal von Mises) and wrapped Cauchy respectively. For the circular beta this contains the mean angle and the \eqn{\alpha} and \eqn{\beta} parameters. For the cardioid distribution this contains the \eqn{\mu} and \eqn{\rho} parameters. For the generalised von Mises this is a vector consisting of the \eqn{\zeta}, \eqn{\kappa}, \eqn{\mu} and \eqn{\alpha} parameters of the generalised von Mises distribution as described in Equation (2.7) of Dietrich and Richter (2017).
+}
+\item{gamma}{
+The norm of the mean vector of the angular Gaussian, the CIPC and the GCPC distributions.
+}
+\item{mu}{
+The mean vector of the angular Gaussian, the CIPC and the GCPC distributions.
+}
+\item{mumu}{
+In the case of "angular Gaussian distribution this is the mean angle in radians.
+}
+\item{circmu}{
+In the case of the CIPC and the GCPC this is the mean angle in radians.
+}
+\item{rho}{
+For the GCPC distribution this is the eigenvalue of the covariance matrix, or the covariance determinant.
+}
+\item{lambda}{
+The lambda parameter of the circular exponential distribution.
+}
+\item{theta}{
+The median direction of the Purkayastha distribution.
+}
+\item{alpha}{
+The concentration parameter of the Purkayastha distribution.
+}
+\item{alpha.sd}{
+The standard error of the concentration parameter of the Purkayastha distribution.
+}
+\item{loglik}{
+The log-likelihood.
+}
+}
+
+\references{
+Mardia K. V. and Jupp P. E. (2000). Directional statistics. Chicester: John Wiley & Sons.
+
+Sra S. (2012). A short note on parameter approximation for von Mises-Fisher distributions:
+and a fast implementation of \eqn{I_s(x)}. Computational Statistics, 27(1): 177--190.
+
+Presnell Brett, Morrison Scott P. and Littell Ramon C. (1998). Projected multivariate linear models for directional data. Journal of the American Statistical Association, 93(443): 1068--1077.
+
+Kent J. and Tyler D. (1988). Maximum likelihood estimation for the wrapped Cauchy distribution.
+Journal of Applied Statistics, 15(2): 247--254.
+
+Dietrich T. and Richter W. D. (2017). Classes of geometrically generalized von Mises distributions.
+Sankhya B, 79(1): 21--59.
+
+https://en.wikipedia.org/wiki/Wrapped_exponential_distribution
+
+Jammalamadaka S. R. and Kozubowski T. J. (2003). A new family of circular models:
+The wrapped Laplace distributions.
+Advances and Applications in Statistics, 3(1), 77--103.
+
+Tsagris M. and Alzeley O. (2023). Circular and spherical projected Cauchy distributions:
+A Novel Framework for Circular and Directional Data Modeling.
+https://arxiv.org/pdf/2302.02468.pdf
+
+Barnett M. J. and Kingston R. L. (2024). A note on the Hendrickson-Lattman phase probability
+distribution and its equivalence to the generalized von Mises distribution.
+Journal of Applied Crystallography, 57(2).
+
+Purkayastha S. (1991). A Rotationally Symmetric Directional Distribution: Obtained through Max-
+imum Likelihood Characterization. The Indian Journal of Statistics, Series A, 53(1): 70--83.
+
+Cabrera J. and Watson G. S. (1990). On a spherical median related distribution. Communications
+in Statistics-Theory and Methods, 19(6): 1973--1986
+}
+
+\author{
+Michail Tsagris and Sofia Piperaki.
+
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+}
+
+%\note{
+%%  ~~further notes~~
+%}
+\seealso{
+\code{\link{colcirc.mle},
+}
+}
+
+\examples{
+y <- rcauchy(100, 3, 1)
+x <- y %% (2 * pi)
+res <- circ.mle(x, distr = "wrapcauchy")
+}
+
