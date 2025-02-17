@@ -1,0 +1,27 @@
+real.mle <- function(x, distr = "normal", v = 5, tol = 1e-07) {
+  if ( distr == "normal" ) {
+    res <- Rfast::normal.mle(x)
+    } else if ( distr == "gumbel" ) {
+    res <- Rfast::gumbel.mle(x, tol = tol)
+  } else if ( distr == "cauchy" ) {
+    res <- Rfast::cauchy.mle(x, tol = tol)
+  } else if ( distr == "logistic" ) {
+    res <- Rfast::logistic.mle(x, tol  = tol)
+  } else if ( distr == "ct" ) {
+    res <- Rfast::ct.mle(x, tol = tol)
+  } else if ( distr == "t" ) {
+    res <- Rfast::tmle(x, v = v, tol = tol)
+  } else if ( distr == "wigner" ) {
+    res <- Rfast::wigner.mle(x, tol = tol)
+  } else if ( distr == "laplace" ) {
+    res <- Rfast::laplace.mle(x, tol = tol)
+  } else if ( distr == "cauchy0") {
+    res <- Rfast2::cauchy0.mle(x, tol = tol)
+  } else if ( distr == "gnormal0" ) {
+    res <- Rfast2::gnormal0.mle(x, tol = tol)
+  }
+  res
+ }
+
+
+

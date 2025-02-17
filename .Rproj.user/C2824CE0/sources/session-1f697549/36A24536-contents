@@ -24,7 +24,7 @@ coldisc.mle <- function(x, distr = "poisson", type = 1) {
   } else if ( distr == 'gp' ) {
     res <- .colgp.mle(x)
   } else if ( distr == 'cc' ) {
-    res <- .colcc.mle(x)
+    res <- .colcc.mle(x, tol = tol )
   } else if ( distr == 'cc0' ) {
     res <- .colcc0.mle(x)
   } else if ( distr == 'com-pois' ) {
@@ -64,10 +64,10 @@ coldisc.mle <- function(x, distr = "poisson", type = 1) {
 }
 
 #-----colbinom.mle-----
-.colbinom.mle <- function(x, N = NULL, tol) {
+.colbinom.mle <- function(x, N = NULL) {
   n <- dim(x)[2]
   res <- matrix(nrow = n, ncol = 2)
-  for ( i in 1:n )  res[i, ] <- unlist( Rfast::binom.mle(x[, i], N = N, tol = tol) )
+  for ( i in 1:n )  res[i, ] <- unlist( Rfast::binom.mle(x[, i], N = N) )
   colnames(res) <- c('loglik', 'probability')
   res
 }
