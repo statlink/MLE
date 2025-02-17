@@ -1,0 +1,42 @@
+library(MLE)
+library(Directional)
+circexp.mle
+circbeta.mle
+mmvm.mle
+library(MLE)
+library(MLE)
+Rfast::binom.mle
+Rfast::betageom.mle
+?betageom.mle
+library(Rfast)
+x=rnbinom(100,10,0.4)
+betageom.mle(x)
+rgeom
+prob=rbeta(100,0.3,5)
+x=rgeom(100,prob)
+betageom.mle(x)
+prob
+prob=rbeta(100,3,5)
+prob
+x=rgeom(100,prob)
+betageom.mle(x)
+.colbetageom.mle <- function(x, tol) {
+n <- dim(x)[2]
+res <- matrix(nrow = n, ncol = 4)
+for ( i in 1:n )  res[i, ] <- unlist( Rfast::betageom.mle(x[, i], tol) )
+colnames(res) <- c('iters', 'loglik', 'alpha', 'beta')
+res
+}
+.colbetageom.mle(as.matrix(x), tol=1e-6)
+Rfast::betabinom.mle
+library(MLE)
+.colbetabinom.mle
+Rfast::betabinom.mle
+library(MLE)
+Rfast::expmle
+x <- rexp(1000,3)
+expmle(x)
+sum(dexp(x, 0.326667, log=T))
+sum(dexp(x, 1/0.326667, log=T))
+gammamle
+gammamle(x)
