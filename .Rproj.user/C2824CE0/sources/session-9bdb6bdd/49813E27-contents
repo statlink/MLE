@@ -73,9 +73,9 @@ colcirc.mle <- function(x, distr = "vm", N = 2, ina, tol = 1e-07, maxiters = 100
   res
 }
 
-.colmmvm.mle <- function(x, N) {
+.colmmvm.mle <- function(x) {
   res <- matrix(NA, dim(x)[2], 3)
-  for ( i in 1:dim(x)[2] )  res[i, ] <- unlist( Directional::mmvm.mle(x[, i], N[i], rads = TRUE) )
+  for ( i in 1:dim(x)[2] )  res[i, ] <- unlist( Directional::mmvm.mle(x[, i], rads = TRUE) )
   colnames(res) <- c("mu", "kappa", "loglik")
   res
 }
