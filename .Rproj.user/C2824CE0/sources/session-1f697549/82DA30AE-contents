@@ -1,0 +1,33 @@
+\name{MLE-package}
+\alias{MLE-package}
+\docType{package}
+\title{
+Maximum Likelihood Estimation of Various Univariate and Multivariate Distributions
+}
+\description{
+The package offers functions for the maximum likelihood estimation of various univariate and multivariate distributions. The list includes univariate continuous and discrete distributions, distributions that lie on the real line, the positive line, interval restricted, circular distributions. Further, multivariate continuous and discrete distributions, distributions for compositional and directional data, etc. The references are included within each set of functions.
+}
+\details{
+\tabular{lll}{
+Package: \tab MLE\cr
+Type: \tab Package\cr
+Version: \tab 1.4\cr
+Date: \tab 2025-02-17\cr
+License: \tab GPL-2\cr
+}
+}
+\author{
+Michail Tsagris \email{mtsagris@uoc.gr}, Sofia Piperaki \email{sofiapip23@gmail.com},
+Muhammad Imran \email{imranshakoor84@yahoo.com}, Rafail Vargiakakis \email{rafailvargiakakis@gmail.com}
+and Nikolaos Kontemeniotis \email{kontemeniotisn@gmail.com}.
+}
+
+\section{Maintainers}{
+Michail Tsagris \email{mtsagris@uoc.gr}.
+}
+
+%\references{
+%}
+
+
+
