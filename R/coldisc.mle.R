@@ -120,8 +120,8 @@ coldisc.mle <- function(x, distr = "poisson", N = NULL, type = 1, tol = 1e-7) {
 .colskellam.mle <- function(x) {
   n <- dim(x)[2]
   res <- matrix(nrow = n, ncol = 4)
-  for ( i in 1:n )  res[i, ] <- unlist( skellam::skellam.mle(x[, i]) )
-  colnames(res) <- c('iters', 'loglik', 'mu1', 'mu2')
+  for ( i in 1:n )  res[i, ] <- unlist( .skellam.mle(x[, i]) )
+  colnames(res) <- c('mu1', 'mu2', 'loglik')
   res
 }
 
