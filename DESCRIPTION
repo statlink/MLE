@@ -1,8 +1,8 @@
 Package: MLE
 Type: Package
 Title: Maximum Likelihood Estimation of Various Univariate and Multivariate Distributions
-Version: 1.5
-Date: 2025-04-03
+Version: 1.6
+Date: 2025-10-20
 Authors@R: c( person("Michail", "Tsagris", role = c("aut", "cre"), email = "mtsagris@uoc.gr"), 
               person("Sofia", "Piperaki", role = c("aut"), email = "sofiapip23@gmail.com"),
               person( "Muhammad", "Imran", role = "ctb", email = "imranshakoor84@yahoo.com" ),
