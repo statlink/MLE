@@ -19,9 +19,20 @@ prop.mle <- function(x, distr = "beta", tol = 1e-07, maxiters = 50) {
     res <- Rfast2::cbern.mle(x, tol = tol)
   } else if ( distr == "sp" ) {
     res <- Rfast2::sp.mle(x)
-  }
-
+  } else if ( distr == "logisbeta" ) {
+    res <- .logisbeta.mle(x, tol = tol) 
+  }	 
+    
   res
 }
 
-
+.logisbeta.mle <- function(x, tol = 1e-7) {
+  n <- length(x)
+  ex <- exp(-x)
+  y <- 1 / ( 1 + ex )
+  par <- Rfast::beta.mle(x, tol = tol)$param
+  a <- par[1]  ;  b <- par[2] 
+  loglik <-  - n * lbeta(a, b) - b * sum(x) - (a + b) * sum( log1p(ex) )
+  list(loglik = loglik, param = par)  
+}  
+    

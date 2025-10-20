@@ -2,7 +2,7 @@ colreal.mle <- function(x, distr = "normal", v = 5, tol = 1e-07, maxiters = 100,
   if ( distr == "normal" ) {
     res <- Rfast::colnormal.mle(x)
   } else if ( distr == "laplace" ) {
-    res <- Rfast::collaplace.mle(x)
+    res <- Rfast::collaplace.mle(x, tol = tol)
   } else if ( distr == "cauchy" ) {
     res <- Rfast2::colcauchy.mle(x, tol = tol, maxiters = maxiters, parallel = parallel)
   } else if ( distr == "gumbel" ) {
@@ -20,7 +20,7 @@ colreal.mle <- function(x, distr = "normal", v = 5, tol = 1e-07, maxiters = 100,
   } else if ( distr == 'gnormal0' ) {
     res <- .colgnormal0.mle(x, tol)
   } else if ( distr == "logisbeta" ) {
-    res <- .collogisbeta.mle(x, tol = tol, maxiters = maxiters, parallel = parallel)
+    res <- .collogisbeta.mle(x, tol = tol)
   }
   res
 }
@@ -94,7 +94,7 @@ colreal.mle <- function(x, distr = "normal", v = 5, tol = 1e-07, maxiters = 100,
   n <- dim(x)[1]
   ex <- exp(-x)
   y <- 1 / ( 1 + ex )
-  res <- Rfast2::colbeta.mle(y, tol = tol, maxiters = maxiters, parallel = parallel)
+  res <- Rfast2::colbeta.mle(x, tol = tol, maxiters = maxiters, parallel = parallel)
   a <- res[, 1]  ;  b <- res[, 2]
   res[, 3] <-  - n * lbeta(a, b) - b * Rfast::colsums(x) - (a + b) * Rfast::colsums( log1p(ex) )
   res

@@ -19,8 +19,9 @@ colprop.mle <- function(x, distr = "beta", tol = 1e-07, maxiters = 100, parallel
     res <- .colzil.mle(x)
   } else if ( distr == "cbern" ) {
     res <- .colcbern.mle(x, tol = tol)
+  } else if ( distr == "logisbeta" ) {
+    res <- .collogisbeta.mle(x, tol = tol)
   }
-
   res
 }
 
@@ -85,6 +86,14 @@ colprop.mle <- function(x, distr = "beta", tol = 1e-07, maxiters = 100, parallel
   res
 }
 
-
+.collogisbeta.mle <- function(x, tol = 1e-7, maxiters = 100, parallel = FALSE) {
+  n <- dim(x)[1]
+  ex <- exp(-x)
+  y <- 1 / ( 1 + ex )
+  res <- Rfast2::colbeta.mle(x, tol = tol, maxiters = maxiters, parallel = parallel)
+  a <- res[, 1]  ;  b <- res[, 2]
+  res[, 3] <-  - n * lbeta(a, b) - b * Rfast::colsums(x) - (a + b) * Rfast::colsums( log1p(ex) )
+  res
+}
 
 
