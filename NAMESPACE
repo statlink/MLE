@@ -16,6 +16,7 @@ importFrom("geppe", epois.mle, gep.mle, pe.mle)
 importFrom("gp", gp.mle)
 importFrom("MN", mn.mle)
 importFrom("foldedt", halft.mle, halft1.mle, foldedt.mle)
+importFrom("svmf", svmf.mle)
 
 importFrom("Rfast", tobit.mle, vm.mle, spml.mle, wrapcauchy.mle, colvm.mle,
            colpoisson.mle, colgeom.mle, colgammamle, colweibull.mle,
