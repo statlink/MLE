@@ -236,8 +236,22 @@ The log-likelihood.
 The standard error of the concentration parameter.
 }
 
-for the scaled von Mises-Fisher distribution
-
+For the scaled von Mises-Fisher distribution a list including:
+\item{mu}{
+The estimated mean direction.
+}
+\item{kappa}{
+The estimated concentration parameter.
+}
+\item{a}{
+The estimated vector of alphas, the first value is 1, by default.
+}
+\item{loglik}{
+the log-likelihood value.
+}
+\item{Gamma}{
+The estimated matrix with the \eqn{\gamma} vectors. The first column of this matrix is the mean direction.
+}
 }
 
 \references{
@@ -281,6 +295,9 @@ Likelihood Characterization. The Indian Journal of Statistics, Series A, 53(1): 
 
 Cabrera J. and Watson G. S. (1990). On a spherical median related distribution.
 Communications in Statistics-Theory and Methods, 19(6): 1973--1986.
+
+Scealy J.L. and Wood A.T.A. (2019). Scaled von Mises-Fisher distributions and regression models for paleomagnetic directional data.
+Journal of the American Statistical Association, 114(528):  1547--1560.
 }
 
 \author{
