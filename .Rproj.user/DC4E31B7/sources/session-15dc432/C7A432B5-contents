@@ -25,7 +25,7 @@ The distribution to fit, "poisson" stands for the Poisson, "zip" for the zero-in
 "gammapois" for the gamma-Poisson distribution, "cc" for the Cacoullos-Cauchy distribution,
 "cc0" for the Cacoullos-Cauchy distribution with zero location, "com-pois" for the Conway-Maxwell Poisson
 (COM-Poisson), and "zicom-pois" for the zero inflated COM-Poisson distribution. "tppxg" and "tpxg" refer
-to the two-parameter Poisson Xgamma and the two-parameter Xgamma distribution, respectively.
+to the two-parameter Poisson Xgamma and the two-parameter Xgamma distributions, respectively.
 }
 \item{N}{
 This is for the binomial distribution only, specifying the total number of successes. If NULL, it is sestimated by the data. It can also be a vector of successes.
