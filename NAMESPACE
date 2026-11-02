@@ -7,10 +7,13 @@ importFrom("bivpois", bp.mle, bp.mle2)
 importFrom("CCd", cc.mle, cc.mle0)
 importFrom("COMPoissonReg", glm.cmp)
 importFrom("Compositional", zad.est, alpha.mle, a.est)
+importFrom("Compositionalcln", cln.mle)
+importFrom("Compositionalzerocens", zerocens.em)
 
 importFrom("Directional", spcauchy.mle, spcauchy.mle2, sipc.mle, pkbd.mle,
            kent.mle, esag.mle, sespc.mle, wood.mle, circexp.mle, circbeta.mle,
-           cardio.mle, ggvm.mle, cipc.mle, gcpc.mle, mmvm.mle, matrixfisher.mle)
+           cardio.mle, ggvm.mle, cipc.mle, gcpc.mle, mmvm.mle, matrixfisher.mle,
+           esag.nr)
 
 importFrom("geppe", epois.mle, gep.mle, pe.mle)
 importFrom("gp", gp.mle)

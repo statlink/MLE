@@ -23,6 +23,8 @@ hspher.mle <- function(x, distr = "vmf", ina, full = FALSE, ell = FALSE, tol = 1
      res <- Directional::kent.mle(x)
    } else if ( distr == "esag" ) {
      res <- Directional::esag.mle(x, full = full, tol = tol)
+   } else if ( distr == "esagnr" ) {
+     res <- Directional::esag.nr(x, tol = tol, maxiters = 1000)
     } else if ( distr == "sespc" ) {
      res <- Directional::sespc.mle(x, full = full, tol = tol)
     } else if ( distr == "ESAGd" ) {

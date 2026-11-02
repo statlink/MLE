@@ -16,22 +16,25 @@ colpositive.mle(x, distr = "gamma", tol = 1e-07, maxiters = 100, parallel = FALS
 A matrix with positive valued data (zeros are not allowed).
 }
 \item{distr}{
-The distribution to fit. "gamma" stands for the gamma distribution, "chisq" for the \eqn{\chi^2} distribution,
-"weibull" for the Weibull, "lomax" for the Lomax, "foldnorm" for the folded normal, "betaprime" for the
-beta-prime distribution, "lognorm" for the log-normal, "logcauchy" for the log-Cauchy, "loglogictic" for
-the log-logistic distribution. "halfnorm" for the half-normal, "invgauss" for the inverse Gaussian,
-"pareto" for the Pareto distribution, "exp" for the exponential distribution, "exp2" I do not remember,
-"maxboltz" for the Maxwell-Boltzman distribution, "rayleigh" is the Rayleigh distribution, "lindley"
-is the Lindley distribution, "halfcauchy" is the half-Cauchy distribution and "powerlaw" is the power
-law distribution. The "normlog" is simply the normal distribution where all values are positive.
-Note, this is not log-normal. It is the normal with a log link. Similarly to the inverse gaussian
-distribution where the mean is an exponentiated. This comes from the GLM theory. The "epois" stands
-for the exponential-Poisson, the "gep" for the generalized exponential-Poisson and the "pe" for the
-Poisson-exponential distribution. The "wp" stands for the Weibull Poisson, the "be" for the beta
-exponential, the "frechet2" for the two-parameter Frechet, for the  the "zigamma" and "ziweibull"
-stand for the zero inflated gamma and Weibull distributions, respectively, and they accept zeros.
-The "halft1" is the half t distribution with unity scatter parameter, the "halft" for the half t
-distribution, and "foldedt" for the folded t distribution.
+The distribution to fit. "gamma" stands for the gamma distribution, "chisq" for the
+\eqn{\chi^2} distribution, "weibull" for the Weibull, "lomax" for the Lomax,
+"foldnorm" for the folded normal, "betaprime" for the beta-prime distribution,
+"lognorm" for the log-normal, "logcauchy" for the log-Cauchy, "loglogistic" for
+the log-logistic distribution. "halfnorm" for the half-normal, "invgauss" for
+the inverse Gaussian, "pareto" for the Pareto distribution, "exp" for the exponential
+distribution, "exp2" I do not remember, "maxboltz" for the Maxwell-Boltzman distribution,
+"rayleigh" is the Rayleigh distribution, "lindley" is the Lindley distribution, "halfcauchy"
+is the half-Cauchy distribution and "powerlaw" is the power law distribution. The "normlog"
+is simply the normal distribution where all values are positive. Note, this is not log-normal.
+It is the normal with a log link. Similarly to the inverse gaussian distribution where
+the mean is an exponentiated. This comes from the GLM theory. The "epois" stands
+for the exponential-Poisson, the "gep" for the generalized exponential-Poisson and
+the "pe" for the Poisson-exponential distribution. The "wp" stands for the Weibull
+Poisson, the "be" for the beta exponential, the "frechet2" for the two-parameter Frechet,
+for the  the "zigamma" and "ziweibull" stand for the zero inflated gamma and Weibull
+distributions, respectively, and they accept zeros. The "halft1" is the half t distribution
+with unity scatter parameter, the "halft" for the half t distribution, and "foldedt"
+for the folded t distribution.
 }
 \item{tol}{
 The tolerance level up to which the maximisation stops; set to 1e-07 by default.
@@ -40,7 +43,8 @@ The tolerance level up to which the maximisation stops; set to 1e-07 by default.
 The maximum number of iterations the Newton-Raphson will perform for the Weibull distribution.
 }
 \item{parallel}{
-Do you want to calculations to take place in parallel? The default value is FALSE. This is only for the Weibull distribution.
+Do you want to calculations to take place in parallel? The default value is FALSE.
+This is only for the Weibull distribution.
 }
 }
 
@@ -49,25 +53,31 @@ For each column, the same distribution is fitted and its parameter and log-likel
 }
 
 \value{
-A matrix with two, three or five (for the colnormlog.mle) columns. The first one or the first two contain the parameter(s) of the distribution and the other columns contain the log-likelihood values.
+A matrix with two, three or five (for the colnormlog.mle) columns. The first one or
+the first two contain the parameter(s) of the distribution and the other columns contain
+the log-likelihood values.
 }
 
 \references{
-Kalimuthu Krishnamoorthy, Meesook Lee and Wang Xiao (2015). Likelihood ratio tests for comparing several
+Kalimuthu Krishnamoorthy, Meesook Lee and Wang Xiao (2015). Likelihood ratio tests
+for comparing several
 gamma distributions. Environmetrics, 26(8): 571--583.
 
-N.L. Johnson, S. Kotz and N. Balakrishnan (1994). Continuous Univariate Distributions, Volume 1 (2nd Edition).
+N.L. Johnson, S. Kotz and N. Balakrishnan (1994). Continuous Univariate Distributions,
+Volume 1 (2nd Edition).
 
 N.L. Johnson, S. Kotz a nd N. Balakrishnan (1970). Distributions in statistics: continuous univariate
 distributions, Volume 2.
 
-Tsagris M., Beneki C. and Hassani H. (2014). On the folded normal distribution. Mathematics, 2(1): 12--28.
+Tsagris M., Beneki C. and Hassani H. (2014). On the folded normal distribution.
+Mathematics, 2(1): 12--28.
 
 Sharma V. K., Singh S. K., Singh U. and Agiwal V. (2015). The inverse Lindley distribution:
 a stress-strength reliability model with application to head and neck cancer data. Journal of
 Industrial and Production Engineering, 32(3): 162--173.
 
-Psarakis and Panaretos (1990). The folded t distribution. Communications in Statistics--Theory and Methods, 19(7): 2717--2734.
+Psarakis and Panaretos (1990). The folded t distribution. Communications in
+Statistics--Theory and Methods, 19(7): 2717--2734.
 
 You can also check the relevant wikipedia pages for these distributions.
 }
@@ -75,7 +85,8 @@ You can also check the relevant wikipedia pages for these distributions.
 \author{
 Michail Tsagris, Sofia Piperaki and Rafail Vargiakakis.
 
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}, Sofia Piperaki  \email{sofiapip23@gmail.com} and Rafail Vargiakakis \email{rafailvargiakakis@gmail.com}.
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr},
+Sofia Piperaki \email{sofiapip23@gmail.com} and Rafail Vargiakakis \email{rafailvargiakakis@gmail.com}.
 }
 
 \seealso{

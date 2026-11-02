@@ -19,7 +19,7 @@ A matrix with numerical data.
 \item{distr}{
 The distribution to fit. "mvnorm" stands for the multivariate normal distribution,
 "mvlnorm" for the multivariate log-normal, "mvt" is the multivariate t distribution and
-"invdir" stands for the inverse Dirichlet distribution. If you want the multivariate Cauchy distribution, simply choose "mvt" and set the v argument equal to 1.
+"invdir" stands for the inverted Dirichlet distribution. If you want the multivariate Cauchy distribution, simply choose "mvt" and set the v argument equal to 1.
 }
 \item{v}{
 The degrees of freedom. Must be a positive number, greater than zero.

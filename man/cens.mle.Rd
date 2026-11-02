@@ -14,10 +14,14 @@ cens.mle(x, distr = "tobit", di, tol = 1e-07)
 
 \arguments{
 \item{x}{
-A vector with positive valued data and zero values. If there are no zero values, a simple normal model is fitted in the end.
+A vector with positive valued data and zero values. If there are no zero values,
+a simple normal model is fitted in the end.
 }
 \item{distr}{
-The distribution to fit. "tobit" stands for the tobit model, "censweibull" for the censored Weibull and "censpois" for the left censored Poisson. For the "censpois" the lowest value in x is taken as the censored point and values below that number are considered to be censored.
+The distribution to fit. "tobit" stands for the tobit model, "censweibull"
+for the censored Weibull and "censpois" for the left censored Poisson.
+For the "censpois" the lowest value in x is taken as the censored point
+and values below that number are considered to be censored.
 }
 \item{di}{
 A vector of 0s (censored) and 1s (not censored) values.
@@ -28,7 +32,11 @@ The tolerance level up to which the maximisation stops; set to 1e-07 by default.
 }
 
 \details{
-The tobin model is useful for (univariate) positive data with left censoring at zero. There is the assumption of a latent variable. Tthe values of that variable which are positive concide with the observed values. If some values are negative, they are left censored and the observed values are zero. Instead of maximising the log-likelihood via a numerical optimiser we have used a Newton-Raphson algorithm which is faster.
+The tobin model is useful for (univariate) positive data with left censoring at zero.
+There is the assumption of a latent variable. Tthe values of that variable which are
+positive concide with the observed values. If some values are negative, they are left
+censored and the observed values are zero. Instead of maximising the log-likelihood
+via a numerical optimiser we have used a Newton-Raphson algorithm which is faster.
 }
 
 \value{
@@ -45,7 +53,8 @@ The vector of the parameters.
 }
 
 \references{
-Tobin James (1958). Estimation of relationships for limited dependent variables. Econometrica. 26(1):24--36.
+Tobin James (1958). Estimation of relationships for limited dependent variables.
+Econometrica. 26(1):24--36.
 
 https://en.wikipedia.org/wiki/Tobit_model
 
@@ -57,7 +66,8 @@ Technical report. ISSTECH-96-022, Boeing Information & Support Services, P.O. Bo
 \author{
 Michail Tsagris and Sofia Piperaki.
 
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and
+Sofia Piperaki \email{sofiapip23@gmail.com}.
 }
 
 \seealso{

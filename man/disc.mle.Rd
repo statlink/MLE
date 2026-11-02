@@ -90,5 +90,5 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and 
 
 \examples{
 x <- rpois(100, 2)
-disc.mle(x, type = "poisson")
+disc.mle(x, distr = "poisson")
 }

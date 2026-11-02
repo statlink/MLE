@@ -21,9 +21,8 @@ The distribution to fit. Spherical distributions: "purka" is the Purkayastha dis
 and "sipc" is the spherical isotropic projected Cauchy. These are rotationally symmetric
 distributions. The "wood" is the Wood distribution, a bimodal distribution. The next three
 are elliptically symmetric distributions. The "kent" is the Kent distribution, "esag" is
-the elliptically symmetric angular Gaussian and the "sespc" is the spherical elliptically
-symmetric projected Cauchy distribution. The "svmf" is the scaled von Mises-Fisher distribution,
-a rotationally symmetric distribution developed for spherical and hyper-spherical data.
+the elliptically symmetric angular Gaussian, "esagnr" is the same, but using Newton-Raphson,
+and "sespc" is the spherical elliptically symmetric projected Cauchy distribution.
 
 Spherical and hyper-spherical distributions: "vmf" stands for the von Mises-Fisher
 distribution, "multivmf" is for the vMF with multiple groups, "acg" is the angular
@@ -31,7 +30,10 @@ central Gaussian and  and the "pkbd" is the Poisson kernel based distribution.
 The "spcauchy" and "spcauchy2" are the spherical Cauchy (2 different methods of estimation),
 "pkbd" and "pkbd2" is the Poisson-kernel based distribution, "iag" stands for the
 independent angular Gaussian distribution, and works for spherical and hyper-spherical data,
-and "ESAGd" is a generalization ofESAG to the hyper-sphere.
+and "ESAGd" is a generalization ofESAG to the hyper-sphere. The "svmf" is the scaled
+von Mises-Fisher distribution, a rotationally symmetric distribution developed for
+spherical and hyper-spherical data.
+
 }
 \item{ina}{
 A numerical vector with discrete numbers starting from 1, i.e. 1, 2, 3, 4,... or a
@@ -44,7 +46,6 @@ set this equal to TRUE. Otherwise leave it FALSE.
 }
 \item{ell}{
 This is for the multivmf.mle only. Do you want the log-likelihood returned?
-The default value is TRUE.
 }
 \item{tol}{
 The tolerance value at which to terminate the iterations.
@@ -114,21 +115,22 @@ A matrix with two rows. The first row is the mean direction and the second is th
 The first comes from the second by normalising to have unit length.
 }
 \item{param}{
-A vector with the elements, the norm of mean vector, the log-likelihood and the log-likelihood of the spherical uniform distribution.
-The third value helps in case you want to do a log-likleihood ratio test for uniformity.
+A vector with the elements, the norm of mean vector, the log-likelihood and the
+log-likelihood of the spherical uniform distribution. The third value helps in
+case you want to do a log-likleihood ratio test for uniformity.
 }
 
 For the spherical Cauchy and the PKBD a list including:
 \item{mesos}{
-The mean in \eqn{R^{d+1}}. See Tsagris and Alenazy (2023) for a re-parametrization that
+The mean in \eqn{R^{d+1}}. See Tsagris and Alenazy (2025) for a re-parametrization that
 applies in the spherical Cauchy also.
 }
 \item{mu}{
 The mean direction.
 }
 \item{gamma}{
-The norm of the mean in \eqn{R^{d+1}}. See Tsagris and Alenazy (2023) for a re-parametrization that
-applies in the spherical Cauchy also.
+The norm of the mean in \eqn{R^{d+1}}. See Tsagris and Alenazy (2025) for a
+re-parametrization that applies to the spherical Cauchy also.
 }
 \item{rho}{
 The concetration parameter, this takes values in [0, 1).
@@ -149,14 +151,17 @@ For the Kent a list including:
 The run time of the procedure.
 }
 \item{G}{
-A 3 x 3 matrix whose first column is the mean direction. The second and third columns are the major and minor axes respectively.
+A 3 x 3 matrix whose first column is the mean direction. The second and
+third columns are the major and minor axes respectively.
 }
 \item{param}{
-A vector with the concentration \eqn{\kappa} and ovalness \eqn{\beta} parameters and the angle \eqn{\psi} used to rotate \bold{H}
+A vector with the concentration \eqn{\kappa} and ovalness \eqn{\beta}
+parameters and the angle \eqn{\psi} used to rotate \bold{H}
 and hence estimate \bold{G} as in Kent (1982).
 }
 \item{logcon}{
-The logarithm of the normalising constant, using the third type approximation (Kume and Wood, 2005).
+The logarithm of the normalising constant, using the third type approximation
+(Kume and Wood, 2005).
 }
 \item{loglik}{
 The value of the log-likelihood.
@@ -175,14 +180,16 @@ The log-likelihood value.
 The inverse of the covariance matrix. It is returned if the argument "full" is TRUE.
 }
 \item{rho}{
-The \eqn{rho} parameter (smallest eigenvalue of the covariance matrix). It is returned if the argument "full" is TRUE.
+The \eqn{rho} parameter (smallest eigenvalue of the covariance matrix). It is
+returned if the argument "full" is TRUE.
 }
 \item{psi}{
-The angle of rotation \eqn{\psi} set this equal to TRUE. It is returned if the argument "full" is TRUE.
+The angle of rotation \eqn{\psi} set this equal to TRUE. It is returned if the
+argument "full" is TRUE.
 }
 \item{iag.loglik}{
-The log-likelihood value of the isotropic angular Gaussian distribution. That is, the projected
-normal distribution which is rotationally symmetric.
+The log-likelihood value of the isotropic angular Gaussian distribution. That is,
+the projected normal distribution which is rotationally symmetric.
 }
 
 For the SESPC a list including:
@@ -199,24 +206,30 @@ The log-likelihood value.
 The inverse of the covariance matrix. It is returned if the argument "full" is TRUE.
 }
 \item{lambda}{
-The \eqn{\lambda_2} parameter (smallest eigenvalue of the covariance matrix). It is returned if the argument "full" is TRUE.
+The \eqn{\lambda_2} parameter (smallest eigenvalue of the covariance matrix). It is
+returned if the argument "full" is TRUE.
 }
 \item{psi}{
-The angle of rotation \eqn{\psi} set this equal to TRUE. It is returned if the argument "full" is TRUE.
+The angle of rotation \eqn{\psi} set this equal to TRUE. It is returned if the
+argument "full" is TRUE.
 }
 \item{sipc.loglik}{
-The log-likelihood value of the isotropic prohected Cuchy distribution, which is rotationally symmetric.
+The log-likelihood value of the isotropic prohected Cuchy distribution, which is
+rotationally symmetric.
 }
 
 For the Wood distribution a list including:
 \item{info}{
-A 5 x 3 matrix containing the 5 parameters, \eqn{\gamma}, \eqn{\delta}, \eqn{\alpha}, \eqn{\beta} and \eqn{\kappa} along with their corresponding 95\% confidence intervals all expressed in degrees.
+A 5 x 3 matrix containing the 5 parameters, \eqn{\gamma}, \eqn{\delta}, \eqn{\alpha},
+\eqn{\beta} and \eqn{\kappa} along with their corresponding 95\% confidence intervals
+all expressed in degrees.
 }
 \item{modes}{
 The two axis of the modes of the distribution expressed in degrees.
 }
 \item{unitvectors}{
-A 3 x 3 matrix with the 3 unit vectors associated with the \eqn{\gamma} and \eqn{\delta} parameters.
+A 3 x 3 matrix with the 3 unit vectors associated with the \eqn{\gamma} and
+\eqn{\delta} parameters.
 }
 \item{loglik}{
 The value of the log-likelihood.
@@ -250,34 +263,38 @@ The estimated vector of alphas, the first value is 1, by default.
 the log-likelihood value.
 }
 \item{Gamma}{
-The estimated matrix with the \eqn{\gamma} vectors. The first column of this matrix is the mean direction.
+The estimated matrix with the \eqn{\gamma} vectors. The first column of this
+matrix is the mean direction.
 }
 }
 
 \references{
 Mardia, K. V. and Jupp, P. E. (2000). Directional statistics. Chicester: John Wiley & Sons.
 
-Sra, S. (2012). A short note on parameter approximation for von Mises-Fisher distributions: and a fast implementation of Is(x).
-Computational Statistics, 27(1): 177--190.
+Sra, S. (2012). A short note on parameter approximation for von Mises-Fisher distributions:
+and a fast implementation of Is(x). Computational Statistics, 27(1): 177--190.
 
 Tyler D. E. (1987). Statistical analysis for the angular central Gaussian distribution on the sphere.
 Biometrika 74(3): 579-589.
 
-Zehao Yu and Xianzheng Huang (2024). A new parameterization for elliptically symmetric angular Gaussian distributions of arbitrary dimension. Electronic Journal of Statististics, 18(1): 301--334.
+Zehao Yu and Xianzheng Huang (2024). A new parameterization for elliptically symmetric
+angular Gaussian distributions of arbitrary dimension.
+Electronic Journal of Statististics, 18(1): 301--334.
 
-Tsagris M. (2024). Directional data analysis: spherical Cauchy or the Poisson-kernel based distribution?.
-Statistics and Computing (accepted for publication).
+Tsagris M. (2024). Directional data analysis: spherical Cauchy or the Poisson-kernel
+based distribution?. Statistics and Computing (accepted for publication).
 https://arxiv.org/pdf/2409.03292
 
-Paine P.J., Preston S.P., Tsagris M. and Wood A.T.A. (2018). An Elliptically Symmetric Angular Gaussian Distribution. Statistics and Computing, 28, 689--697.
+Paine P.J., Preston S.P., Tsagris M. and Wood A.T.A. (2018). An Elliptically Symmetric
+Angular Gaussian Distribution. Statistics and Computing, 28, 689--697.
 
 Tsagris M. and Alzeley O. (2025). Circular and spherical projected Cauchy distributions:
 A Novel Framework for Circular and Directional Data Modelling.
 Australian & New Zealand Journal of Statistics (accepted for publication).
 https://arxiv.org/pdf/2302.02468.pdf
 
-Kato S. and McCullagh P. (2020). Some properties of a Cauchy family on the sphere derived from the
-Mobius transformations. Bernoulli, 26(4): 3224--3248.
+Kato S. and McCullagh P. (2020). Some properties of a Cauchy family on the sphere
+derived from the Mobius transformations. Bernoulli, 26(4): 3224--3248.
 https://arxiv.org/pdf/1510.07679.pdf
 
 Golzy M. and Markatou M. (2020). Poisson kernel-based clustering on the sphere:
@@ -296,14 +313,17 @@ Likelihood Characterization. The Indian Journal of Statistics, Series A, 53(1): 
 Cabrera J. and Watson G. S. (1990). On a spherical median related distribution.
 Communications in Statistics-Theory and Methods, 19(6): 1973--1986.
 
-Scealy J.L. and Wood A.T.A. (2019). Scaled von Mises-Fisher distributions and regression models for paleomagnetic directional data.
+Scealy J.L. and Wood A.T.A. (2019). Scaled von Mises-Fisher distributions
+
+and regression models for paleomagnetic directional data.
 Journal of the American Statistical Association, 114(528):  1547--1560.
 }
 
 \author{
 Michail Tsagris and Sofia Piperaki.
 
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}
+and Sofia Piperaki \email{sofiapip23@gmail.com}.
 }
 
 %\note{
