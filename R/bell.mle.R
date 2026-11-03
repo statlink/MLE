@@ -1,4 +1,4 @@
-bell.mle <- function(x, a, b, k, lambda, distr = "BB12", method = "B") {
+bell.mle <- function(x, a, b, k, lambda, distr = "BB12", method = "BFGS") {
   if ( distr == "BB12" ) {
     res <- BGFD::mBellB(x, a = a, b = b, k = k, lambda = lambda, method = method)
     param <- res$Estimates[, 1]
