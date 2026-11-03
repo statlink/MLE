@@ -5,7 +5,7 @@ MLE of some matrix distributions
 }
 
 \description{
-MLE of some matrix distributions some matrix distributions.
+MLE of some matrix distributions.
 }
 
 \usage{
@@ -18,7 +18,8 @@ For the matrix normal, a list with k elements (k is the sample size), k matrices
 \eqn{n \times p} each. For the matrix Fisher an array containing rotation matrices in SO(3).
 }
 \item{distr}{
-The distribution to fit. "MN" stands for the matrix normal, while "mfisher" stands for the matrix Fisher distribution (defined in SO(3)).
+The distribution to fit. "MN" stands for the matrix normal, while "mfisher" stands for
+the matrix Fisher distribution (defined in SO(3)).
 }
 }
 
@@ -31,19 +32,23 @@ The runtime required for the whole fitting procedure.
 The number of iterations required for the estimation of the U and V matrices.
 }
 \item{M}{
-The estimated mean matrix of the distribution, a numerical matrix of dimensions \eqn{n \times p}.
+The estimated mean matrix of the distribution, a numerical matrix of dimensions
+\eqn{n \times p}.
 }
 \item{U}{
-The estimated covariance matrix associated with the rows, a numerical matrix of dimensions \eqn{n \times n}.
+The estimated covariance matrix associated with the rows, a numerical matrix of
+dimensions \eqn{n \times n}.
 }
 \item{V}{
-The estimated covariance matrix associated with the columns, a numerical matrix of dimensions \eqn{p \times p}.
+The estimated covariance matrix associated with the columns, a numerical matrix
+of dimensions \eqn{p \times p}.
 }
 For the matrix Fisher the components of \eqn{ svd( \bar{X} ) }.
 }
 
 \references{
-Pocuca N., Gallaugher M. P., Clark K. M. and McNicholas P. D. (2019). Assessing and Visualizing Matrix Variate Normality. arXiv:1910.02859.
+Pocuca N., Gallaugher M. P., Clark K. M. and McNicholas P. D. (2019).
+Assessing and Visualizing Matrix Variate Normality. arXiv:1910.02859.
 
 https://en.wikipedia.org/wiki/Matrix_normal_distribution#Definition
 

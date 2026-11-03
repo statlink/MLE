@@ -26,13 +26,12 @@ and "sespc" is the spherical elliptically symmetric projected Cauchy distributio
 
 Spherical and hyper-spherical distributions: "vmf" stands for the von Mises-Fisher
 distribution, "multivmf" is for the vMF with multiple groups, "acg" is the angular
-central Gaussian and  and the "pkbd" is the Poisson kernel based distribution.
-The "spcauchy" and "spcauchy2" are the spherical Cauchy (2 different methods of estimation),
-"pkbd" and "pkbd2" is the Poisson-kernel based distribution, "iag" stands for the
-independent angular Gaussian distribution, and works for spherical and hyper-spherical data,
-and "ESAGd" is a generalization ofESAG to the hyper-sphere. The "svmf" is the scaled
-von Mises-Fisher distribution, a rotationally symmetric distribution developed for
-spherical and hyper-spherical data.
+central Gaussian. The "spcauchy" and "spcauchy2" are the spherical Cauchy
+(2 different methods of estimation), "pkbd" and "pkbd2" is the Poisson-kernel based distribution,
+"iag" stands for the independent angular Gaussian distribution, and works for spherical
+and hyper-spherical data, and "ESAGd" is a generalization of ESAG to the hyper-sphere.
+The "svmf" is the scaled von Mises-Fisher distribution, a rotationally symmetric distribution
+developed for spherical and hyper-spherical data.
 
 }
 \item{ina}{
@@ -61,19 +60,19 @@ Newton-Raphson for the projected normal distribution, on the sphere, is implemen
 
 The "vmf" estimates the mean direction and concentration of a fitted von Mises-Fisher
 distribution. The von Mises-Fisher distribution for groups of data is also implemented.
-The "acg"" fits the angular central Gaussian distribution. There is a constraint on the
+The "acg" fits the angular central Gaussian distribution. There is a constraint on the
 estimated covariance matrix; its trace is equal to the number of variables. An iterative
 algorithm takes place and convergence is guaranteed. The "iag" implements MLE of the
 (hyper-)spherical projected normal distribution. The "esag" is for spherical data, while
-"ESAGd" is for hyper-spherical data. The "spcauchy" is faster than the "spcacuhy2"
-because it employs the Newton-Raphson algortihm, but for high dimensions the latter
+"ESAGd" is for hyper-spherical data. The "spcauchy" is faster than the "spcauchy2"
+because it employs the Newton-Raphson algorithm, but for high dimensions the latter
 is preferred. Both functions estimate the parameters of the spherical Cauchy distribution,
 for any dimension. Despite the name sounds confusing, it is implemented for arbitrary
 dimensions, not only the sphere. The function employs a combination of the fixed points
 iteration algorithm and the Brent algorithm. The "pkbd" is faster than "pkbd2" beacuse
 it employs the Newton-Raphson algorithm, but for high dimensions the latter is preferred.
 Both estimate the parameters of the Poisson kernel based distribution (PKBD), for any
-dimension. The "sipc" implements MLE of the spherical independent projected Cauchy
+dimension. The "sipc" implements MLE of the spherical isotropic projected Cauchy
 distribution, for spherical data only.
 }
 
@@ -101,7 +100,7 @@ A vector with the group concentration parameters.
 
 For the angular central Gaussian a list including:
 \item{iter}{
-The number if iterations required by the algorithm to converge to the solution.
+The number of iterations required by the algorithm to converge to the solution.
 }
 \item{cova}{
 The estimated covariance matrix.
@@ -214,7 +213,7 @@ The angle of rotation \eqn{\psi} set this equal to TRUE. It is returned if the
 argument "full" is TRUE.
 }
 \item{sipc.loglik}{
-The log-likelihood value of the isotropic prohected Cuchy distribution, which is
+The log-likelihood value of the isotropic projected Cauchy distribution, which is
 rotationally symmetric.
 }
 
@@ -225,7 +224,7 @@ A 5 x 3 matrix containing the 5 parameters, \eqn{\gamma}, \eqn{\delta}, \eqn{\al
 all expressed in degrees.
 }
 \item{modes}{
-The two axis of the modes of the distribution expressed in degrees.
+The two axes of the modes of the distribution expressed in degrees.
 }
 \item{unitvectors}{
 A 3 x 3 matrix with the 3 unit vectors associated with the \eqn{\gamma} and

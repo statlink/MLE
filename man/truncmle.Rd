@@ -14,17 +14,20 @@ truncmle(x, distr = "trunccauchy", a, b, tol = 1e-07)
 
 \arguments{
 \item{x}{
-A numerical vector with continuous data. For the Cauchy distribnution, they can be anywhere on the real line. For the exponential distribution they must be strictly positive.
+A numerical vector with continuous data. For the Cauchy distribution,
+they can be anywhere on the real line. For the exponential distribution
+they must be strictly positive.
 }
 \item{distr}{
-The type of distribution to fit, "trunccauchy" and "truncexpmle" stand for the truncated Cauchy and truncated exponential distributions, respectively.
+The type of distribution to fit, "trunccauchy" and "truncexpmle" stand for
+the truncated Cauchy and truncated exponential distributions, respectively.
 }
 \item{a}{
 The lower value at which the Cauchy distribution is truncated.
 }
 \item{b}{
-The upper value at which the Cauchy or the exponential distribution is truncated. For the exponential this must
-be greater than zero.
+The upper value at which the Cauchy or the exponential distribution is truncated.
+For the exponential this must be greater than zero.
 }
 \item{tol}{
 The tolerance value to terminate the fitting algorithm.
@@ -38,7 +41,7 @@ Maximum likelihood of some truncated distributions is performed.
 \value{
 A list including:
 \item{iters}{
-The number of iterations reuired by the Newton-Raphson algorithm.
+The number of iterations required by the Newton-Raphson algorithm.
 }
 \item{loglik}{
 The log-likelihood.
@@ -60,7 +63,8 @@ http://lagrange.math.siu.edu/Olive/ol-bookp.htm
 \author{
 Michail Tsagris and Sofia Piperaki.
 
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr} and Sofia Piperaki  \email{sofiapip23@gmail.com}.
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}
+and Sofia Piperaki \email{sofiapip23@gmail.com}.
 }
 
 \seealso{

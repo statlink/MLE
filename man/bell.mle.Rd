@@ -35,7 +35,7 @@ The distribution to fit, "BB12" stands for the Bell Burr-12, "BBX" for the Bell 
 "BL" for the Bell Lomax, "BW" for the Bell Weibull distribution, "CBB12" for the
 complementary Bell Burr-12, "CBBX" for the complementary Bell Burr-X distribution,
 "CBE" for the complementary Bell exponential distribution, "CBEW" for the complementary
-Bell exponentiated Weibul distribution, "CBEE" for the complementary Bell extended
+Bell exponentiated Weibull distribution, "CBEE" for the complementary Bell extended
 exponential distribution, "CBF" for the complementary Bell Fisk distribution,
 "CBL" for the complementary Bell Lomax distribution, and "CBW" for the complementary
 Bell Weibull distribution.
@@ -110,5 +110,5 @@ x <- rgamma(1000, 3, 5)
 # Fitting of the Bell Burr-12 (BB12) distribution
 bell.mle(x, a = 2.1, b = 1.3, k = 0.02, lambda = 1.2, distr = "BB12", method = "BFGS")
 # Fitting of the Bell exponential (BE) distribution
-bell.mle(x, a = 2.1, lambda = 0.5 ,distr = "BE", method = "BFGS")
+bell.mle(x, a = 2.1, lambda = 0.5, distr = "BE", method = "BFGS")
 }

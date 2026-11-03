@@ -32,9 +32,9 @@ The tolerance level up to which the maximisation stops; set to 1e-07 by default.
 }
 
 \details{
-The tobin model is useful for (univariate) positive data with left censoring at zero.
-There is the assumption of a latent variable. Tthe values of that variable which are
-positive concide with the observed values. If some values are negative, they are left
+The tobit model is useful for (univariate) positive data with left censoring at zero.
+There is the assumption of a latent variable. The values of that variable which are
+positive coincide with the observed values. If some values are negative, they are left
 censored and the observed values are zero. Instead of maximising the log-likelihood
 via a numerical optimiser we have used a Newton-Raphson algorithm which is faster.
 }
@@ -58,8 +58,9 @@ Econometrica. 26(1):24--36.
 
 https://en.wikipedia.org/wiki/Tobit_model
 
-Fritz Scholz (1996). Maximum Likelihood Estimation for Type I Censored Weibull Data Including Covariates.
-Technical report. ISSTECH-96-022, Boeing Information & Support Services, P.O. Box 24346, MS-7L-22.
+Fritz Scholz (1996). Maximum Likelihood Estimation for Type I Censored Weibull
+Data Including Covariates. Technical report. ISSTECH-96-022, Boeing Information
+& Support Services, P.O. Box 24346, MS-7L-22.
 
 }
 
