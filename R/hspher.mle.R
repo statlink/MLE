@@ -1,4 +1,4 @@
-hspher.mle <- function(x, distr = "vmf", ina, full = FALSE, ell = FALSE, tol = 1e-07) {
+hspher.mle <- function(x, distr = "vmf", ina, full = FALSE, ell = FALSE, tol = 1e-06) {
    if ( distr == "vmf" ) {
      res <- Rfast::vmf.mle(x, tol = tol)
    } else if ( distr == "multivmf" ) {
@@ -33,6 +33,12 @@ hspher.mle <- function(x, distr = "vmf", ina, full = FALSE, ell = FALSE, tol = 1
       res <- svmf::svmf.mle(x, full = full)
    } else if ( distr == "wood" ) {
      res <- Directional::wood.mle(x)
+   } else if ( distr == "isvmf" ) {
+     res <- Mobius::isvmf.mle(x, tol = tol)
+   } else if ( distr == "mvmf" ) {
+     res <- Mobius::mvmf.mle(x, tol = tol)
+   } else if ( distr == "mvmf1" ) {
+     res <- Mobius::mvmf1.mle(x, tol = tol)
    }
    res
 }

@@ -9,6 +9,7 @@ importFrom("COMPoissonReg", glm.cmp)
 importFrom("Compositional", zad.est, alpha.mle, a.est)
 importFrom("Compositionalcln", cln.mle)
 importFrom("Compositionalzerocens", zerocens.em)
+importFrom("Mobius", isvmf.mle)
 
 importFrom("Directional", spcauchy.mle, spcauchy.mle2, sipc.mle, pkbd.mle,
            kent.mle, esag.mle, sespc.mle, wood.mle, circexp.mle, circbeta.mle,

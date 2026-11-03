@@ -9,7 +9,7 @@ MLE of (hyper-)spherical distributions.
 }
 
 \usage{
-hspher.mle(x, distr = "vmf", ina, full = FALSE, ell = FALSE, tol = 1e-07)
+hspher.mle(x, distr = "vmf", ina, full = FALSE, ell = FALSE, tol = 1e-06)
 }
 
 \arguments{
@@ -27,11 +27,13 @@ and "sespc" is the spherical elliptically symmetric projected Cauchy distributio
 Spherical and hyper-spherical distributions: "vmf" stands for the von Mises-Fisher
 distribution, "multivmf" is for the vMF with multiple groups, "acg" is the angular
 central Gaussian. The "spcauchy" and "spcauchy2" are the spherical Cauchy
-(2 different methods of estimation), "pkbd" and "pkbd2" is the Poisson-kernel based distribution,
-"iag" stands for the independent angular Gaussian distribution, and works for spherical
-and hyper-spherical data, and "ESAGd" is a generalization of ESAG to the hyper-sphere.
-The "svmf" is the scaled von Mises-Fisher distribution, a rotationally symmetric distribution
-developed for spherical and hyper-spherical data.
+(2 different methods of estimation), "pkbd" and "pkbd2" is the Poisson-kernel based
+distribution, "iag" stands for the independent angular Gaussian distribution, and
+works for spherical and hyper-spherical data, and "ESAGd" is a generalization of ESAG
+to the hyper-sphere. The "svmf" is the scaled von Mises-Fisher distribution, a
+rotationally symmetric distribution developed for spherical and hyper-spherical data.
+The "isvmf" is the isotropic scaled von Mises-Fisher distribution, "mvmf" is the
+Mobius-von Mises-Fisher distribution, and "mvmf1" is a special case of "mvmf".
 
 }
 \item{ina}{
